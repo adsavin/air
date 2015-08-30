@@ -47,10 +47,10 @@ return array(
 //        ),
         // uncomment the following to use a MySQL database
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=air',
+            'connectionString' => 'mysql:host=localhost;dbname=bswshop_data',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => '123',
+            'password' => 'root',
             'charset' => 'utf8',
         ),
         'errorHandler' => array(

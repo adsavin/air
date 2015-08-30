@@ -57,10 +57,10 @@ $org = Organization::model()->find();
                     <a class="navbar-brand" href="index.php">
                         <?php if (!empty($org->logo_show_on_header)): ?>
                             <?php if ($org->logo_show_on_header == "yes"): ?>
-                                <img src="<?php echo Yii::app()->baseUrl; ?>/upload/<?php echo $org->org_logo; ?>" style="width: 50px; <?php echo $bg; ?>" />
+                                <img style="height: 18px;" src="<?php echo Yii::app()->baseUrl; ?>/upload/<?php echo $org->org_logo; ?>" />
                             <?php endif; ?>
                         <?php endif; ?>
-                        <?php echo $org->org_name; ?>
+                                <?php echo $org->org_name; ?>
                     </a>
                 </div>
 
@@ -89,20 +89,25 @@ $org = Organization::model()->find();
                                 <img class="img-responsive" src="images/us.png" />
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <?php
-                                $id = Yii::app()->request->cookies['user_id']->value;
-                                $user = User::model()->findByPk($id);
-                                ?>
-                                <strong><?php echo @$user->user_name; ?> (<?php echo @$user->user_level; ?>)</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.php?r=Site/Logout" class="btn" onclick="return confirm('Logout Now')">
-                                <span class="glyphicon glyphicon-off"></span>
-                            </a>
-                        </li>
+                        <?php if (isset(Yii::app()->request->cookies['user_id'])) { ?>
+        <!--                            <p class="navbar-text">
+                            <?php
+                            $id = Yii::app()->request->cookies['user_id']->value;
+                            $user = User::model()->findByPk($id);
+                            ?>
+                                        <strong><?php echo @$user->user_name; ?> (<?php echo @$user->user_level; ?>)</strong>
+                                    </p>-->
+                            <li>
+                                <a href="index.php?r=basic/changeProfile">
+                                    <strong><?php echo @$user->user_name; ?> (<?php echo @$user->user_level; ?>)</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.php?r=Site/Logout" class="btn" onclick="return confirm('Logout Now')">
+                                    <span class="glyphicon glyphicon-off"></span>
+                                </a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -116,5 +121,11 @@ $org = Organization::model()->find();
                 <?php $this->renderPartial("//site/index"); ?>
             <?php endif; ?>
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("input[type=text]").first().focus();
+            });
+        </script>
     </body>
 </html>

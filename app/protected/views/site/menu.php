@@ -15,7 +15,7 @@
         <!-- menu -->
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="glyphicon glyphicon-home"></i>
+                <i class="glyphicon glyphicon-heart-empty"></i>
                 <?php echo Yii::t('lang', 'diary'); ?>
             </a>
             <ul class="dropdown-menu" role="menu">
