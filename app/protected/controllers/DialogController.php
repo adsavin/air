@@ -2,327 +2,326 @@
 
 class DialogController extends CController {
 
-  public $layout = '//layouts/dialog';
+    public $layout = '//layouts/dialog';
 
-  public function actionDialogGroupProduct() {
-    $criteria = new CDbCriteria();
-    $criteria->order = 'group_product_name';
+    public function actionDialogGroupProduct() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'group_product_name';
 
-    $model = GroupProduct::model()->findAll($criteria);
+        $model = GroupProduct::model()->findAll($criteria);
 
-    $this->render('//Dialog/DialogGroupProduct', array(
-        'model' => $model
-    ));
-  }
+        $this->render('//Dialog/DialogGroupProduct', array(
+            'model' => $model
+        ));
+    }
 
-  public function actionDialogProduct($find_on_page_quotation = false) {
-    $this->render('//Dialog/DialogProduct', array(
-      'find_on_page_quotation' => $find_on_page_quotation
-    ));
-  }
+    public function actionDialogProduct($find_on_page_quotation = false) {
+        $this->render('//Dialog/DialogProduct', array(
+            'find_on_page_quotation' => $find_on_page_quotation
+        ));
+    }
 
-  public function actionGridProduct() {
-    $search = null;
-    $criteria = new CDbCriteria();
+    public function actionGridProduct() {
+        $search = null;
+        $criteria = new CDbCriteria();
 
-    if (!empty($_POST)) {
-      $search = Util::input($_POST['search']);
+        if (!empty($_POST)) {
+            $search = Util::input($_POST['search']);
 
-      $criteria->condition = "
+            $criteria->condition = "
         product_code LIKE(:search)
         OR product_name LIKE(:search)
       ";
 
-      $criteria->params = array(
-        'search' => '%'.$search.'%'
-      );
-    }
+            $criteria->params = array(
+                'search' => '%' . $search . '%'
+            );
+        }
 
-    $product = new Product();
-    $model = new CActiveDataProvider($product, array(
-        'sort' => array(
-            'defaultOrder' => 'product_id DESC'
-        )
-    ));
+        $product = new Product();
+        $model = new CActiveDataProvider($product, array(
+            'sort' => array(
+                'defaultOrder' => 'product_id DESC'
+            )
+        ));
 
-    $pagination = new CPagination();
-    $pagination->setPageSize(40);
+        $pagination = new CPagination();
+        $pagination->setPageSize(40);
 
-    $model->setPagination($pagination);
-    $model->setCriteria($criteria);
-
-    $this->render('//Dialog/GridProduct', array(
-        'model' => $model
-    ));
-  }
-
-  public function actionDialogMember() {
-    $this->render('//Dialog/DialogMember');
-  }
-
-  public function actionDialogMemberGrid() {
-    if (!empty($_POST)) {
-      $model = new CActiveDataProvider('Member', array(
-        'pagination' => false
-      ));
-
-      if (!empty($_POST)) {
-        $search = Util::input($_POST['search']);
-        $criteria = new CDbCriteria();
-        $criteria->compare('member_code', $search, true, 'OR');
-        $criteria->compare('member_name', $search, true, 'OR');
-        $criteria->compare('member_tel', $search, true, 'OR');
-        $criteria->compare('member_address', $search, true, 'OR');
-
+        $model->setPagination($pagination);
         $model->setCriteria($criteria);
-      }
 
-      $this->render('//Grid/GridMember', array(
-          'model' => $model
-      ));
-    }
-  }
-
-  public function actionDialogEndSale() {
-    $total = 0;
-
-    $this->renderPartial('//Dialog/DialogEndSale', array(
-      'total' => $total
-    ));
-  }
-
-  public function actionDialogPrintSlip($bill_id, $input, $return_money) {
-    // organization data
-    $org = Organization::model()->find();
-
-    if (!empty($bill_id)) {
-      $bill_id = (int) $bill_id;
+        $this->render('//Dialog/GridProduct', array(
+            'model' => $model
+        ));
     }
 
-    $billSale = BillSale::model()->findByAttributes(array(
-      'bill_sale_id' => $bill_id
-    ));
-
-    if (empty($billSale)) {
-      $billSale = BillSale::model()->find(array(
-        'limit' => 1,
-        'order' => 'bill_sale_id DESC',
-        'condition' => "bill_sale_status = 'pay'"
-      ));
+    public function actionDialogMember() {
+        $this->render('//Dialog/DialogMember');
     }
 
-    $bill_id = $billSale->bill_sale_id;
+    public function actionDialogMemberGrid() {
+        if (!empty($_POST)) {
+            $model = new CActiveDataProvider('Member', array(
+                'pagination' => false
+            ));
 
-    // bill_sale_detail data
-    $billSaleDetail = BillSaleDetail::model()->findAll(array(
-      'condition' => 'bill_id = :bill_id',
-      'params' => array(
-        'bill_id' => $bill_id
-      ),
-      'order' => 'bill_sale_detail_id'
-    ));
+            if (!empty($_POST)) {
+                $search = Util::input($_POST['search']);
+                $criteria = new CDbCriteria();
+                $criteria->compare('member_code', $search, true, 'OR');
+                $criteria->compare('member_name', $search, true, 'OR');
+                $criteria->compare('member_tel', $search, true, 'OR');
+                $criteria->compare('member_address', $search, true, 'OR');
 
-    // render page
-    $this->renderPartial('//Report/Slip', array(
-      'org' => $org,
-      'billSale' => $billSale,
-      'billSaleDetail' => $billSaleDetail,
-      'input' => $input,
-      'return_money' => $return_money
-    ));
-  }
+                $model->setCriteria($criteria);
+            }
 
-  public function actionDialogBillSendProduct($bill_type = "send", $bill_sale_id = null) {
-    // organization data
-    $org = Organization::model()->find();
-
-    if (!empty($bill_sale_id)) {
-      $bill_sale_id = (int) $bill_sale_id;
+            $this->render('//Grid/GridMember', array(
+                'model' => $model
+            ));
+        }
     }
 
-    // bill_sale data
-    $billSale = BillSale::model()->findByAttributes(array(
-      'bill_sale_id' => $bill_sale_id
-    ));
+    public function actionDialogEndSale() {
+        $total = 0;
 
-    if (empty($billSale)) {
-      // last bill
-      $billSale = BillSale::model()->find(array(
-        'order' => 'bill_sale_id DESC',
-        'limit' => 1,
-        'condition' => 'bill_sale_status = "pay"'
-      ));
+        $this->renderPartial('//Dialog/DialogEndSale', array(
+            'total' => $total
+        ));
     }
 
-    // bill_sale_detail data
-    $billSaleDetail = BillSaleDetail::model()->findAll(array(
-      'condition' => "bill_id = {$bill_sale_id}"
-    ));
+    public function actionDialogPrintSlip($bill_id, $input, $return_money) {
+        // organization data
+        $org = Organization::model()->find();
 
-    // member
-    if ($billSale->member_id > 0) {
-      $criteria = new CDbCriteria();
-      $criteria->compare('member_code', @$billSale->member->member_code);
+        if (!empty($bill_id)) {
+            $bill_id = (int) $bill_id;
+        }
 
-      $member = Member::model()->find($criteria);
-    } else {
-      $member = null;
+        $billSale = BillSale::model()->findByAttributes(array(
+            'bill_sale_id' => $bill_id
+        ));
+
+        if (empty($billSale)) {
+            $billSale = BillSale::model()->find(array(
+                'limit' => 1,
+                'order' => 'bill_sale_id DESC',
+                'condition' => "bill_sale_status = 'pay'"
+            ));
+        }
+
+        $bill_id = $billSale->bill_sale_id;
+
+        // bill_sale_detail data
+        $billSaleDetail = BillSaleDetail::model()->findAll(array(
+            'condition' => 'bill_id = :bill_id',
+            'params' => array(
+                'bill_id' => $bill_id
+            ),
+            'order' => 'bill_sale_detail_id'
+        ));
+        
+        // render page
+        $this->renderPartial('//Report/Slip', array(
+            'org' => $org,
+            'billSale' => $billSale,
+            'billSaleDetail' => $billSaleDetail,
+            'input' => $input,
+            'return_money' => $return_money
+        ));
     }
 
-    $this->renderPartial('//Report/BillSendProduct', array(
-        'org' => $org,
-        'billSale' => $billSale,
-        'billSaleDetail' => $billSaleDetail,
-        'member' => $member,
-        'billType' => $bill_type
-    ));
-  }
+    public function actionDialogBillSendProduct($bill_type = "send", $bill_sale_id = null) {
+        // organization data
+        $org = Organization::model()->find();
 
-  public function actionDialogBillDrop() {
-    // object
-    $org = Organization::model()->find();
-    $hidden_member_code = Yii::app()->session['hidden_member_code'];
+        if (!empty($bill_sale_id)) {
+            $bill_sale_id = (int) $bill_sale_id;
+        }
 
-    // member
-    $member = Member::model()->findByAttributes(array(
-        'member_code' => $hidden_member_code
-    ));
+        // bill_sale data
+        $billSale = BillSale::model()->findByAttributes(array(
+            'bill_sale_id' => $bill_sale_id
+        ));
 
-    // update bill_sale
-    $bill_sale_ids = Yii::app()->session['bill_sale_ids'];
-    foreach ($bill_sale_ids as $id) {
-      $model = BillSale::model()->findByPk((int) $id);
-      $model->bill_sale_drop_bill_date = new CDbExpression("NOW()");
-      $model->save();
+        if (empty($billSale)) {
+            // last bill
+            $billSale = BillSale::model()->find(array(
+                'order' => 'bill_sale_id DESC',
+                'limit' => 1,
+                'condition' => 'bill_sale_status = "pay"'
+            ));
+        }
+
+        // bill_sale_detail data
+        $billSaleDetail = BillSaleDetail::model()->findAll(array(
+            'condition' => "bill_id = {$bill_sale_id}"
+        ));
+
+        // member
+        if ($billSale->member_id > 0) {
+            $criteria = new CDbCriteria();
+            $criteria->compare('member_code', @$billSale->member->member_code);
+
+            $member = Member::model()->find($criteria);
+        } else {
+            $member = null;
+        }
+
+        $this->renderPartial('//Report/BillSendProduct', array(
+            'org' => $org,
+            'billSale' => $billSale,
+            'billSaleDetail' => $billSaleDetail,
+            'member' => $member,
+            'billType' => $bill_type
+        ));
     }
 
-    // render
-    $this->renderPartial('//Report/BillDrop', array(
-        'org' => $org,
-        'member' => $member
-    ));
-  }
+    public function actionDialogBillDrop() {
+        // object
+        $org = Organization::model()->find();
+        $hidden_member_code = Yii::app()->session['hidden_member_code'];
 
-  function actionDialogSerial() {
-    $productSerials = new CActiveDataProvider('ProductSerial', array(
-      'criteria' => array(
-        'condition' => 'serial_no != 0',
-        'order' => 'id DESC',
-        'limit' => 100
-      )
-    ));
+        // member
+        $member = Member::model()->findByAttributes(array(
+            'member_code' => $hidden_member_code
+        ));
 
-    $this->render('//Dialog/DialogSerial', array(
-        'productSerials' => $productSerials
-    ));
-  }
+        // update bill_sale
+        $bill_sale_ids = Yii::app()->session['bill_sale_ids'];
+        foreach ($bill_sale_ids as $id) {
+            $model = BillSale::model()->findByPk((int) $id);
+            $model->bill_sale_drop_bill_date = new CDbExpression("NOW()");
+            $model->save();
+        }
 
-  function actionDialogUser() {
-    $model = new CActiveDataProvider('User', array(
-        'pagination' => array(
-            'pageSize' => 20
-        )
-    ));
-
-    if (!empty($_POST)) {
-      $search = Util::input($_POST['search']);
-      $criteria = new CDbCriteria();
-      $criteria->compare('user_name', $search, true, 'OR');
-      $criteria->compare('user_tel', $search, true, 'OR');
-
-      $model->setCriteria($criteria);
+        // render
+        $this->renderPartial('//Report/BillDrop', array(
+            'org' => $org,
+            'member' => $member
+        ));
     }
 
-    $this->render('//Dialog/DialogUser', array(
-        'model' => $model
-    ));
-  }
+    function actionDialogSerial() {
+        $productSerials = new CActiveDataProvider('ProductSerial', array(
+            'criteria' => array(
+                'condition' => 'serial_no != 0',
+                'order' => 'id DESC',
+                'limit' => 100
+            )
+        ));
 
-  function actionDialogBranch() {
-    $model = new CActiveDataProvider('Branch');
-    $this->render('//Dialog/DialogBranch', array(
-        'model' => $model
-    ));
-  }
-
-  function actionDialogBillAddVat($bill_sale_id) {
-    $org = Organization::model()->find();
-
-    $billSale = BillSale::model()->findByAttributes(array(
-      'bill_sale_id' => (int) $bill_sale_id
-    ));
-
-    $this->render('//Dialog/DialogBillAddVat', array(
-        'org' => $org,
-        'billSale' => $billSale
-    ));
-  }
-
-  function actionReportSalePerDayPdf() {
-    $params = array();
-
-    $result = TempSalePerDay::model()->findAll();
-    $date_find = Yii::app()->session['date_find'];
-
-    if (!empty($result)) {
-      $branch_id = Yii::app()->session['branch_id'];
-
-      $params['result'] = $result;
-      $params['date_find'] = Util::mysqlToThaiDate($date_find);
-      $params['sale_condition_cash'] = Yii::app()->session['sale_condition_cash'];
-      $params['sale_condition_credit'] = Yii::app()->session['sale_condition_credit'];
-      $params['has_bonus_no'] = Yii::app()->session['has_bonus_no'];
-      $params['has_bonus_yes'] = Yii::app()->session['has_bonus_yes'];
-      $params['n'] = 1;
-      $params['branch'] = Branch::model()->findByPk((int) $branch_id);
+        $this->render('//Dialog/DialogSerial', array(
+            'productSerials' => $productSerials
+        ));
     }
 
-    $this->render('//Report/ReportSalePerDayPdf', $params);
-  }
+    function actionDialogUser() {
+        $model = new CActiveDataProvider('User', array(
+            'pagination' => array(
+                'pageSize' => 20
+            )
+        ));
 
-  public function actionReportSalePerDayExcel() {
-    $tempSalePerDays = TempSalePerDay::model()->findAll();
+        if (!empty($_POST)) {
+            $search = Util::input($_POST['search']);
+            $criteria = new CDbCriteria();
+            $criteria->compare('user_name', $search, true, 'OR');
+            $criteria->compare('user_tel', $search, true, 'OR');
 
-    $output = "";
+            $model->setCriteria($criteria);
+        }
 
-    foreach ($tempSalePerDays as $row) {
-      $output .= "{$row->no},{$row->sale_date},{$row->bill_id},{$row->barcode},{$row->name},{$row->bill_status},{$row->price},{$row->sale_price},{$row->price_old},{$row->bonus_per_unit},{$row->qty},{$row->total_bonus},{$row->total_income}\n";
+        $this->render('//Dialog/DialogUser', array(
+            'model' => $model
+        ));
     }
 
-    file_put_contents('report-sale-per-day.csv', $output);
-  }
+    function actionDialogBranch() {
+        $model = new CActiveDataProvider('Branch');
+        $this->render('//Dialog/DialogBranch', array(
+            'model' => $model
+        ));
+    }
 
-  public function actionGetRepairSearch() {
-    if (!empty($_POST)) {
-      $search = $_POST['search'];
+    function actionDialogBillAddVat($bill_sale_id) {
+        $org = Organization::model()->find();
 
-      $repairs = new CActiveDataProvider('Repair', array(
-        'criteria' => array(
-          'condition' => '
+        $billSale = BillSale::model()->findByAttributes(array(
+            'bill_sale_id' => (int) $bill_sale_id
+        ));
+
+        $this->render('//Dialog/DialogBillAddVat', array(
+            'org' => $org,
+            'billSale' => $billSale
+        ));
+    }
+
+    function actionReportSalePerDayPdf() {
+        $params = array();
+
+        $result = TempSalePerDay::model()->findAll();
+        $date_find = Yii::app()->session['date_find'];
+
+        if (!empty($result)) {
+            $branch_id = Yii::app()->session['branch_id'];
+
+            $params['result'] = $result;
+            $params['date_find'] = Util::mysqlToThaiDate($date_find);
+            $params['sale_condition_cash'] = Yii::app()->session['sale_condition_cash'];
+            $params['sale_condition_credit'] = Yii::app()->session['sale_condition_credit'];
+            $params['has_bonus_no'] = Yii::app()->session['has_bonus_no'];
+            $params['has_bonus_yes'] = Yii::app()->session['has_bonus_yes'];
+            $params['n'] = 1;
+            $params['branch'] = Branch::model()->findByPk((int) $branch_id);
+        }
+
+        $this->render('//Report/ReportSalePerDayPdf', $params);
+    }
+
+    public function actionReportSalePerDayExcel() {
+        $tempSalePerDays = TempSalePerDay::model()->findAll();
+
+        $output = "";
+
+        foreach ($tempSalePerDays as $row) {
+            $output .= "{$row->no},{$row->sale_date},{$row->bill_id},{$row->barcode},{$row->name},{$row->bill_status},{$row->price},{$row->sale_price},{$row->price_old},{$row->bonus_per_unit},{$row->qty},{$row->total_bonus},{$row->total_income}\n";
+        }
+
+        file_put_contents('report-sale-per-day.csv', $output);
+    }
+
+    public function actionGetRepairSearch() {
+        if (!empty($_POST)) {
+            $search = $_POST['search'];
+
+            $repairs = new CActiveDataProvider('Repair', array(
+                'criteria' => array(
+                    'condition' => '
             product_code LIKE(:search)
             OR repair_tel LIKE(:search)
             OR repair_name LIKE(:search)
             OR repair_product_name LIKE(:search)
           ',
-          'params' => array(
-            'search' => '%'.$search.'%'
-          ),
-          'order' => 'repair_id DESC'
-        )
-      ));
+                    'params' => array(
+                        'search' => '%' . $search . '%'
+                    ),
+                    'order' => 'repair_id DESC'
+                )
+            ));
 
-      $this->render('//Basic/GetRepairSearch', array(
-        'repairs' => $repairs
-      ));
+            $this->render('//Basic/GetRepairSearch', array(
+                'repairs' => $repairs
+            ));
+        }
     }
-  }
 
-  public function actionPayType() {
-    $payTypes = PayType::model()->findAll();
-    $this->renderPartial('//Dialog/PayType', array(
-      'payTypes' => $payTypes
-    ));
-  }
+    public function actionPayType() {
+        $payTypes = PayType::model()->findAll();
+        $this->renderPartial('//Dialog/PayType', array(
+            'payTypes' => $payTypes
+        ));
+    }
 
 }
-

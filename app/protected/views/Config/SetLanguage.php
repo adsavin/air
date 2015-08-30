@@ -1,9 +1,9 @@
 <?php
+
 $lg = Yii::app()->session['language'];
 
 if (!empty($lg)) {
-  Yii::app()->language = $lg;
+    Yii::app()->language = $lg;
 } else {
-  Yii::app()->session['language'] = 'th';
+    Yii::app()->session['language'] = 'lv';
 }
-?>

@@ -2,8 +2,8 @@
 
 <?php
 
-date_default_timezone_set('Asia/Bangkok');
-@ini_alter('date.timezone','Asia/Bangkok');
+date_default_timezone_set('Asia/Vientiane');
+@ini_alter('date.timezone', 'Asia/Vientiane');
 
 include_once '../mpdf60/mpdf.php';
 
@@ -20,11 +20,11 @@ $bill_slip_title = $configSoftware->bill_slip_title;
 $td_logo = '';
 
 if ($org->org_logo_show_on_bill == 'yes') {
-	$td_logo = "
+    $td_logo = "
 		<td>
 			<img src='upload/{$org->org_logo}' width='45px' />
 		</td>
-	";	
+	";
 }
 
 $html = "
@@ -38,7 +38,7 @@ $html = "
 				</div>
 				<div style='font-size: {$fontSize}px; text-align: center;'>
 					<div>TAX: {$org->org_tax_code}</div>
-					<div>".Yii::t('lang', 'phone_number').".{$org->org_tel}</div>
+					<div>" . Yii::t('lang', 'phone_number') . ".{$org->org_tel}</div>
 				</div>
 				<div style='font-size: {$fontSize}px; text-align: center;'>
 					Bill NO: {$billSaleId}
@@ -61,9 +61,9 @@ foreach ($billSaleDetail as $r) {
     $product_name = $r->product->product_name;
     $product_price = $r->bill_sale_detail_price;
     $product_qty = $r->bill_sale_detail_qty;
-   
+
     $price_per_row = ($product_qty * $product_price);
-    
+
     $sum += $price_per_row;
     $sum_qty += $product_qty;
 
@@ -75,12 +75,12 @@ foreach ($billSaleDetail as $r) {
         $productPrice = BarcodePrice::model()->findByPk($product_code);
         $fk = $productPrice->barcode_fk;
         $productRelate = Product::model()->findByAttributes(array(
-        'product_code' => $fk
+            'product_code' => $fk
         ));
 
-        $product_name = $productRelate->product_name." ({$productPrice->name})";
+        $product_name = $productRelate->product_name . " ({$productPrice->name})";
     }
-    
+
     $html .= "
     	<tr>
         <td>
@@ -130,37 +130,36 @@ $sum_text = ($total - $vat);
 $sum_text = number_format($sum_text, 2);
 $total_text = number_format($total, 2);
 
-$html .= "<div style='font-size: {$fontSize}px;'>".Yii::t('lang', 'total').": $sum_qty";
-    
+$html .= "<div style='font-size: {$fontSize}px;'>" . Yii::t('lang', 'total') . ": $sum_qty";
+
 if ($billSale->bill_sale_vat == 'vat') {
-	$html .= "&nbsp;&nbsp; VAT: $vat";
+    $html .= "&nbsp;&nbsp; VAT: $vat";
 }
 
 $html .= "
 	</div>
-    <div style='font-size: ${fontSize}px;'>".Yii::t('lang', 'sum').": $total_text</div>
-    <div style='font-size: {$fontSize}px;'>".Yii::t('lang', 'receive_money').": $input</div>
-    <div style='font-size: {$fontSize}px;'>".Yii::t('lang', 'discount').": $bonus</div>
-    <div style='font-size: {$fontSize}px;'>".Yii::t('lang', 'refund').": $change</div>
+    <div style='font-size: ${fontSize}px;'>" . Yii::t('lang', 'sum') . ": $total_text</div>
+    <div style='font-size: {$fontSize}px;'>" . Yii::t('lang', 'receive_money') . ": $input</div>
+    <div style='font-size: {$fontSize}px;'>" . Yii::t('lang', 'discount') . ": $bonus</div>
+    <div style='font-size: {$fontSize}px;'>" . Yii::t('lang', 'refund') . ": $change</div>
     <br />
 
     ";
 
-    if ($billSale->bill_sale_vat == 'vat') {
-        $html .= "<div style='font-size: {$fontSize}px;'>".Yii::t('lang', 'type_vat').": $vat_type</div>";
-    }
-
-    $html .= "<br /><div style='font-size: {$fontSize}px'>$date_time</div>";
-
-if (!empty($configSoftware->bill_slip_footer)) {
-  $fontSizeFooter = $fontSize - 2;
-  $html .= "<div style='margin-top: 5px; font-size: {$fontSizeFooter}px'>* {$configSoftware->bill_slip_footer}</div>";
+if ($billSale->bill_sale_vat == 'vat') {
+    $html .= "<div style='font-size: {$fontSize}px;'>" . Yii::t('lang', 'type_vat') . ": $vat_type</div>";
 }
 
-$w = $billConfig->slip_width;
-$h = $billConfig->slip_height;
+$html .= "<br /><div style='font-size: {$fontSize}px'>$date_time</div>";
 
-$mpdf = new mPDF('th', array($w, $h), 0, 0, 5, 5, 5, 5);
+if (!empty($configSoftware->bill_slip_footer)) {
+    $fontSizeFooter = $fontSize - 2;
+    $html .= "<div style='margin-top: 5px; font-size: {$fontSizeFooter}px'>* {$configSoftware->bill_slip_footer}</div>";
+}
+
+$w = $billConfig->slip_width > 0 ? $billConfig->slip_width : 100;
+$h = $billConfig->slip_height > 0 ? $billConfig->slip_height : 160;
+$mpdf = new mPDF(Yii::app()->language, array($w, $h), 0, 0, 5, 5, 5, 5);
+//$mpdf = new mPDF(Yii::app()->language, 'A6', 0, 0, 5, 5, 5, 5);
 $mpdf->WriteHTML($html);
 $mpdf->Output();
-?>

@@ -174,15 +174,19 @@
 
     function printBillGetRepair() {
         var repair_id = $("input[name=repair_id]").val();
+        if(repair_id === "") {
+            return false;
+        }
         var options = 'width=950px; height=600px';
-
         window.open('index.php?r=Report/PrintBillGetRepair&repair_id=' + repair_id, null, options);
     }
 
     function printBillPayGetRepair() {
         var repair_id = $("input[name=repair_id]").val();
         var options = 'width=950px; height=600px';
-
+        if(repair_id === "") {
+            return false;
+        }
         window.open('index.php?r=Report/PrintBillPayGetRepair&repair_id=' + repair_id, null, options);
     }
 </script>

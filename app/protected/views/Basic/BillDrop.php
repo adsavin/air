@@ -1,26 +1,20 @@
 <?php $this->renderPartial('//Config/SetLanguage'); ?>
 
 <script type="text/javascript">
-    document.ready = function() {
-        $("#from").datepicker({
+    document.ready = function () {
+        $(".datepicker").datepicker({
             dateFormat: 'dd/mm/yy',
             changeYear: true,
             changeMonth: true
         });
+    };
 
-        $("#to").datepicker({
-            dateFormat: 'dd/mm/yy',
-            changeYear: true,
-            changeMonth: true
-        });
-    }
-    
-    function browseMember() {        
+    function browseMember() {
         $.ajax({
             url: 'index.php?r=Dialog/DialogMember',
-            success: function(data) {
+            success: function (data) {
                 $("#modalContent").html(data);
-                $(".cmdChooseMember").click(function() {
+                $(".cmdChooseMember").click(function () {
                     $("#member_code").val($(this).attr("member_code"));
                     $("#member_name").val($(this).attr("member_name"));
                     $("#hidden_member_code").val($(this).attr("member_code"));
@@ -28,65 +22,65 @@
             }
         });
     }
-    
+
     function getBillDrop() {
         $.ajax({
             url: "index.php?r=Basic/BillDropGet",
             type: "POST",
             data: $("#formData").serialize(),
-            success: function(data) {
-                if (data == 'complete') {
+            success: function (data) {
+                if (data === 'complete') {
                     refreshData();
                 }
             }
         });
     }
-    
+
     function printBillDrop() {
         // send data to session
         var uri = "index.php?r=Dialog/DialogBillDrop";
         var options = "dialogWidth=900px; dialogHeight=600px";
-           
+
         $.ajax({
             url: 'index.php?r=Basic/BillDropTemp',
             type: 'POST',
             data: $("#formData").serialize(),
-            success: function(data) {
-                if (data == 'complete') {
+            success: function (data) {
+                if (data === 'complete') {
                     window.open(uri, null, options);
                     refreshData();
                 }
             },
-            error: function(data) {
+            error: function (data) {
                 alert('ERROR ' + data.responseText);
             }
         });
     }
-    
+
     function refreshData() {
         document.form1.submit();
     }
-    
+
     function cancelBillDrop() {
         $.ajax({
             url: "<?php echo $this->createUrl("Basic/BillDropCancel"); ?>",
             type: "POST",
             data: $("#formData").serialize(),
-            success: function(data) {
-                if (data != null) {
+            success: function (data) {
+                if (data !== null) {
                     refreshData();
                 }
             }
         });
     }
-    
+
     function deleteBillDrop() {
-	    $.ajax({
+        $.ajax({
             url: "<?php echo $this->createUrl("Basic/BillDropDelete"); ?>",
             type: "POST",
             data: $("#formData").serialize(),
-            success: function(data) {
-                if (data != null) {
+            success: function (data) {
+                if (data !== null) {
                     refreshData();
                 }
             }
@@ -98,11 +92,28 @@
         var to = $("#to").val();
         var member_code = $("#member_code").val();
 
-        if (from != "" && to != "" && member_code != "") {
+        if (from !== "" && to !== "" && member_code !== "") {
             document.form1.submit();
         } else {
             alert("<?php echo Yii::t('lang', 'please_enter_data'); ?>");
         }
+    }
+
+    function chooseMember(code, name) {
+        $("input[name=member_code]").val(code);
+        $("input[name=txt_member_name]").val(name);
+
+        $("#member_code").val(code);
+        $("#member_name").val(name);
+
+        $("#modalContent").html("");
+        $("#btnCloseModal").trigger('click');
+
+        clearModalContent();
+    }
+
+    function clearModalContent() {
+        $("#myModal").modal("hide");
     }
 </script>
 
@@ -119,19 +130,19 @@
         ?>
         <div>
             <label><?php echo Yii::t('lang', 'by_date'); ?>: </label>
-            <input type="text" name="from" id="from" class="form-control" style="width: 200px" value="<?php echo Util::mysqlToThaiDate($from); ?>" />
+            <input type="text" name="from" id="from" class="form-control datepicker" style="width: 200px" value="<?php echo Util::mysqlToThaiDate($from); ?>" />
 
             <label><?php echo Yii::t('lang', 'up_to_date'); ?>: </label>
-            <input type="text" name="to" id="to" class="form-control" style="width: 200px" value="<?php echo Util::mysqlToThaiDate($to); ?>" />
+            <input type="text" name="to" id="to" class="form-control datepicker" style="width: 200px" value="<?php echo Util::mysqlToThaiDate($to); ?>" />
         </div>
         <div>
             <div class="">
-            <label><?php echo Yii::t('lang', 'members'); ?></label>
-            <input type="text" name="member_code" id="member_code" class="form-control" style="width: 150px" value="<?php echo $member_code; ?>" />
-            <input type="text" name="member_name" id="member_name" value="<?php echo $member_name; ?>" class="form-control disabled" style="width: 362px" readonly="readonly" />
-            <a href="#" class="btn btn-info" onclick="browseMember()" data-toggle="modal" data-target="#myModal">
-                <i class="glyphicon glyphicon-search"></i>
-            </a>
+                <label><?php echo Yii::t('lang', 'members'); ?></label>
+                <input type="text" name="member_code" id="member_code" class="form-control" style="width: 150px" value="<?php echo $member_code; ?>" />
+                <input type="text" name="member_name" id="member_name" value="<?php echo $member_name; ?>" class="form-control disabled" style="width: 362px" readonly="readonly" />
+                <a href="#" class="btn btn-info" onclick="browseMember()" data-toggle="modal" data-target="#myModal">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
             </div>
         </div>
         <div>
@@ -154,21 +165,20 @@
         <form id="formData">
             <div>
                 <a href="#" class="btn btn-info" onclick="getBillDrop()">
-                  <i class="glyphicon glyphicon-list-alt"></i>
-                  <?php echo Yii::t('lang', 'get_bill'); ?>
+                    <i class="glyphicon glyphicon-list-alt"></i>
+                    <?php echo Yii::t('lang', 'get_bill'); ?>
                 </a>
                 <a href="#" class="btn btn-info" onclick="printBillDrop()">
-                  <i class="glyphicon glyphicon-print"></i>
-                  <?php echo Yii::t('lang', 'print_invoices'); ?>
+                    <i class="glyphicon glyphicon-print"></i>
+                    <?php echo Yii::t('lang', 'print_invoices'); ?>
                 </a>
                 <a href="#" class="btn btn-warning" onclick="cancelBillDrop()">
-                  <i class="glyphicon glyphicon-remove"></i>
-                  <?php echo Yii::t('lang', 'bill_cancel'); ?>
-                </a>
-                |
+                    <i class="glyphicon glyphicon-remove"></i>
+                    <?php echo Yii::t('lang', 'bill_cancel'); ?>
+                </a>                
                 <a href="#" class="btn btn-danger" onclick="deleteBillDrop()">
                     <b class="glyphicon glyphicon-trash"></b>
-                	<?php echo Yii::t('lang', 'removing_the_bill_out'); ?>
+                    <?php echo Yii::t('lang', 'removing_the_bill_out'); ?>
                 </a>
             </div>
             <?php
@@ -246,15 +256,15 @@
 
 <!-- Modal -->
 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" style="width: 850px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel"><?php echo Yii::t('lang', 'select_members'); ?></h4>
-      </div>
-      <div class="modal-body" id="modalContent">
+    <div class="modal-dialog" style="width: 850px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btnCloseModal" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"><?php echo Yii::t('lang', 'select_members'); ?></h4>
+            </div>
+            <div class="modal-body" id="modalContent">
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

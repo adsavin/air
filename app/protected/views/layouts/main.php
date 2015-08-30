@@ -28,7 +28,8 @@ $org = Organization::model()->find();
         echo CHtml::cssFile('css/styles.css');
 //        echo CHtml::cssFile('css/bootflat.css');
         // js
-        Yii::app()->clientScript->registerScriptFile('js/jquery-2.0.3.js');
+//        Yii::app()->clientScript->registerScriptFile('js/jquery-2.0.3.js');
+        Yii::app()->clientScript->registerScriptFile('js/jquery-1.9.1.js');
         Yii::app()->clientScript->registerScriptFile('js/jquery-ui-1.10.3.custom.js');
         Yii::app()->clientScript->registerScriptFile('js/bootstrap.js');
         Yii::app()->clientScript->registerScriptFile('js/numeral/numeral.js');
@@ -74,7 +75,7 @@ $org = Organization::model()->find();
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="flag" onclick="changeLanguage('la')">
+                            <a class="flag" onclick="changeLanguage('lv')">
                                 <img class="img-responsive" src="images/la.png" />
                             </a>
                         </li>
