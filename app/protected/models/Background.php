@@ -1,0 +1,1 @@
+<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIEJhY2tncm91bmQgZXh0ZW5kcyBDQWN0aXZlUmVjb3JkIHsKCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBtb2RlbCgkbmFtZSA9IF9fQ0xBU1NfXykgewogICAgcmV0dXJuIHBhcmVudDo6bW9kZWwoJG5hbWUpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHRhYmxlTmFtZSgpIHsKICAgIHJldHVybiAnYmFja2dyb3VuZHMnOwogIH0KfQ==")); ?>
