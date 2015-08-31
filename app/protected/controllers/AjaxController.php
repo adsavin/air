@@ -266,7 +266,7 @@ class AjaxController extends Controller {
             echo 'success';
           }
         } else {
-          echo 'สินค้าหมดสต้อก ไม่สามารถจำหน่ายได้';
+          echo Yii::t("lang", "product_out_of_stock");
         }
       }
     }

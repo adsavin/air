@@ -1,1 +1,71 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIFByb2R1Y3RTZXJpYWwgZXh0ZW5kcyBDQWN0aXZlUmVjb3JkIHsKCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBtb2RlbCgkY2xhc3NOYW1lID0gX19DTEFTU19fKSB7CiAgICByZXR1cm4gcGFyZW50Ojptb2RlbCgkY2xhc3NOYW1lKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKSB7CiAgICByZXR1cm4gJ3RiX3Byb2R1Y3Rfc2VyaWFsJzsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiByZWxhdGlvbnMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgJ3Byb2R1Y3QnID0+IGFycmF5KHNlbGY6OkJFTE9OR1NfVE8sICdQcm9kdWN0JywgJ3Byb2R1Y3RfY29kZScpLAogICAgICAgICdiaWxsX3NhbGUnID0+IGFycmF5KHNlbGY6OkJFTE9OR1NfVE8sICdCaWxsU2FsZScsICdiaWxsX3NhbGVfaWQnKQogICAgKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBhdHRyaWJ1dGVMYWJlbHMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgJ3Byb2R1Y3Rfc3RhcnRfZGF0ZScgPT4gJ+C4p+C4seC4meC4l+C4teC5iOC5gOC4o+C4tOC5iOC4oeC4leC5ieC4meC4m+C4o+C4sOC4geC4seC4mScsCiAgICAgICAgJ3Byb2R1Y3RfZXhwaXJlX2RhdGUnID0+ICfguKfguLHguJnguKvguKHguJTguJvguKPguLDguIHguLHguJknCiAgICApOwogIH0KCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBnZXRFeHBpcmVTdGF0dXMoJHByb2R1Y3RfZXhwaXJlX2RhdGUpIHsKICAgIGlmICgkcHJvZHVjdF9leHBpcmVfZGF0ZSAhPSAnMDAwMC0wMC0wMCAwMDowMDowMCcpIHsKICAgICAgJGV4cF9kYXRlID0gZXhwbG9kZSgnLScsICRwcm9kdWN0X2V4cGlyZV9kYXRlKTsKCiAgICAgIGlmIChjb3VudCgkZXhwX2RhdGUpID4gMykgewogICAgICAgICRleHBfeSA9ICRleHBfZGF0ZVswXTsKICAgICAgICAkZXhwX20gPSAkZXhwX2RhdGVbMV07CiAgICAgICAgJGV4cF9kID0gJGV4cF9kYXRlWzJdOwoKICAgICAgICAkeSA9IGRhdGUoIlkiKTsKICAgICAgICAkbSA9IGRhdGUoIm0iKTsKICAgICAgICAkZCA9IGRhdGUoImQiKTsKCiAgICAgICAgLy8gbW9yZSB5ZWFyCiAgICAgICAgaWYgKCRleHBfeSA+ICR5KSB7CiAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQoKICAgICAgICAvLyBzYW1lIHllYXIKICAgICAgICBpZiAoJGV4cF95ID09ICR5KSB7CiAgICAgICAgICAvLyBtb3JlIG1vbnRoCiAgICAgICAgICBpZiAoJGV4cF9tID4gJG0pIHsKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgfQoKICAgICAgICAgIC8vIHNhbWUgbW9udGgKICAgICAgICAgIGlmICgkZXhwX20gPT0gJG0pIHsKICAgICAgICAgICAgLy8gbW9yZSBkYXkgYW5kIHNhbWUgZGF5CiAgICAgICAgICAgIGlmICgkZXhwX2QgPj0gJGQpIHsKICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHJldHVybiB0cnVlOyAgICAvLyBleHBpcmUKICAgICAgfQoKICAgICAgcmV0dXJuIGZhbHNlOwogICAgfQoKICAgIHJldHVybiBmYWxzZTsKICB9Cgp9Cgo=")); ?>
+<?php
+
+class ProductSerial extends CActiveRecord {
+
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
+
+  public function tableName() {
+    return 'tb_product_serial';
+  }
+
+  public function relations() {
+    return array(
+        'product' => array(self::BELONGS_TO, 'Product', 'product_code'),
+        'bill_sale' => array(self::BELONGS_TO, 'BillSale', 'bill_sale_id')
+    );
+  }
+
+  public function attributeLabels() {
+    return array(
+        'product_start_date' => 'วันที่เริ่มต้นประกัน',
+        'product_expire_date' => 'วันหมดประกัน'
+    );
+  }
+
+  public static function getExpireStatus($product_expire_date) {
+    if ($product_expire_date != '0000-00-00 00:00:00') {
+      $exp_date = explode('-', $product_expire_date);
+
+      if (count($exp_date) > 3) {
+        $exp_y = $exp_date[0];
+        $exp_m = $exp_date[1];
+        $exp_d = $exp_date[2];
+
+        $y = date("Y");
+        $m = date("m");
+        $d = date("d");
+
+        // more year
+        if ($exp_y > $y) {
+          return false;
+        }
+
+        // same year
+        if ($exp_y == $y) {
+          // more month
+          if ($exp_m > $m) {
+            return false;
+          }
+
+          // same month
+          if ($exp_m == $m) {
+            // more day and same day
+            if ($exp_d >= $d) {
+              return false;
+            }
+          }
+        }
+
+        return true;    // expire
+      }
+
+      return false;
+    }
+
+    return false;
+  }
+
+}
+

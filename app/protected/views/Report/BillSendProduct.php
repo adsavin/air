@@ -1,6 +1,7 @@
 <?php $this->renderPartial('//Config/SetLanguage'); ?>
 
 <?php
+
 include_once '../mpdf60/mpdf.php';
 
 $billSaleId = $billSale->bill_sale_id;
@@ -27,7 +28,7 @@ $date_time = "{$date_time1} {$date_time2}";
 $td_logo = '';
 
 if ($org->org_logo_show_on_bill == 'yes') {
-	$td_logo = "
+    $td_logo = "
 		<td width='80px' rowspan='6'>
 			<img src='upload/{$org->org_logo}' width='60px' />
 		</td>
@@ -64,7 +65,7 @@ $header = "
         <tr>
             <td align='center'>
 			    <div class='header-text'>
-			    	".Yii::t('lang', 'tax_identification_number').": {$org->org_tax_code} ".Yii::t('lang', 'phone_number').": {$org->org_tel}
+			    	" . Yii::t('lang', 'tax_identification_number') . ": {$org->org_tax_code} " . Yii::t('lang', 'phone_number') . ": {$org->org_tel}
 			    </div>
             </td>
         </tr>
@@ -85,41 +86,41 @@ $header = "
         <tr>
             <td align='center'>
 			    <div class='header-text'>
-			    	".Yii::t('lang', 'date').": $date_time ".Yii::t('lang', 'bill_no').": $billSaleId
+			    	" . Yii::t('lang', 'date') . ": $date_time " . Yii::t('lang', 'bill_no') . ": $billSaleId
 			    </div>
 			</td>
 		</tr>
 	</table>	
     ";
-    
+
 // to member
 if (!empty($member)) {
     $header .= "
     <div class='row'>
-        <span><strong>".Yii::t('lang', 'customers').":</strong> {$member->member_name}</span>
+        <span><strong>" . Yii::t('lang', 'customers') . ":</strong> {$member->member_name}</span>
         <span>&nbsp;&nbsp;&nbsp;</span>
-        <span><strong>".Yii::t('lang', 'phone_number').":</strong> {$member->member_tel}</span>
+        <span><strong>" . Yii::t('lang', 'phone_number') . ":</strong> {$member->member_tel}</span>
     </div>
     <div class='row'>
-        <span><strong>".Yii::t('lang', 'tax_identification_number').":</strong> </span>
+        <span><strong>" . Yii::t('lang', 'tax_identification_number') . ":</strong> </span>
         <span>{$member->tax_code}</span>
     </div>
-    <div class='row'><strong>".Yii::t('lang', 'address').":</strong> {$member->member_address}</div>
+    <div class='row'><strong>" . Yii::t('lang', 'address') . ":</strong> {$member->member_address}</div>
     ";
 }
 
 if (!empty($billSale->customer_name)) {
     $header .= "
     <div class='row'>
-        <span><strong>".Yii::t('lang', 'customers').":</strong> {$billSale->customer_name}</span>
+        <span><strong>" . Yii::t('lang', 'customers') . ":</strong> {$billSale->customer_name}</span>
         <span>&nbsp;&nbsp;&nbsp;</span>
-        <span><strong>".Yii::t('lang', 'phone_number').":</strong> {$billSale->customer_tel}</span>
+        <span><strong>" . Yii::t('lang', 'phone_number') . ":</strong> {$billSale->customer_tel}</span>
     </div>
     <div class='row'>
-        <span><strong>".Yii::t('lang', 'tax_identification_number').":</strong> </span>
+        <span><strong>" . Yii::t('lang', 'tax_identification_number') . ":</strong> </span>
         <span>{$billSale->customer_tax}</span>
     </div>
-    <div class='row'><strong>".Yii::t('lang', 'address').":</strong> {$billSale->customer_address}</div>
+    <div class='row'><strong>" . Yii::t('lang', 'address') . ":</strong> {$billSale->customer_address}</div>
     ";
 }
 
@@ -129,12 +130,12 @@ $content = "
         <thead>
             <tr>
                 <td class='cell-header' style='text-align: center' width='25px'>#</td>
-                <td class='cell-header'>".Yii::t('lang', 'product_code')."</td>
-                <td class='cell-header'>".Yii::t('lang', 'list')."</td>
-                <td class='cell-header' style='text-align: right'>".Yii::t('lang', 'weight_g')."</td>
-                <td class='cell-header' style='text-align: right' width='60px'>".Yii::t('lang', 'price')."</td>
-                <td class='cell-header' style='text-align: right' width='50px'>".Yii::t('lang', 'number')."</td>
-                <td class='cell-header' style='text-align: right' width='70px'>".Yii::t('lang', 'sum')."</td>
+                <td class='cell-header'>" . Yii::t('lang', 'product_code') . "</td>
+                <td class='cell-header'>" . Yii::t('lang', 'list') . "</td>
+                <td class='cell-header' style='text-align: right'>" . Yii::t('lang', 'weight_g') . "</td>
+                <td class='cell-header' style='text-align: right' width='60px'>" . Yii::t('lang', 'price') . "</td>
+                <td class='cell-header' style='text-align: right' width='50px'>" . Yii::t('lang', 'number') . "</td>
+                <td class='cell-header' style='text-align: right' width='70px'>" . Yii::t('lang', 'sum') . "</td>
             </tr>
         </thead>
         <tbody>";
@@ -151,7 +152,7 @@ foreach ($billSaleDetail as $r) {
     $product_price = $r->bill_sale_detail_price;
     $product_qty = $r->bill_sale_detail_qty;
     $bill_sale_detail_price_vat = $r->bill_sale_detail_price_vat;
-   
+
     // find name of product
     if (empty($product_name)) {
         $productPrice = BarcodePrice::model()->findByPk($product_code);
@@ -160,14 +161,14 @@ foreach ($billSaleDetail as $r) {
             'product_code' => $fk
         ));
 
-        $product_name = $productRelate->product_name." ({$productPrice->name})";
+        $product_name = $productRelate->product_name . " ({$productPrice->name})";
     }
 
     $price_per_row = ($product_qty * $product_price);
-    
+
     $sum += $price_per_row;
     $sum_qty += $product_qty;
-    
+
     $price_per_row = number_format($price_per_row);
     $product_price = number_format($product_price);
     $product_qty = number_format($product_qty);
@@ -180,7 +181,7 @@ foreach ($billSaleDetail as $r) {
     if (empty($weight)) {
         $weight = 0;
     }
-    
+
     $content .= "
         <tr>
             <td class='cell' style='text-align: center'>$i</td>
@@ -201,7 +202,7 @@ $content .= "
         </tbody>
         <tfoot>
             <tr>
-                <td class='text bold'>".Yii::t('lang', 'sum')."</td>
+                <td class='text bold'>" . Yii::t('lang', 'sum') . "</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -237,42 +238,42 @@ $content .= "<table width='300px'>";
 if ($billSale->bill_sale_vat == 'vat') {
     $content .= "
             <tr>
-                <td>".Yii::t('lang', 'type_vat')."</td>
+                <td>" . Yii::t('lang', 'type_vat') . "</td>
                 <td style='text-align: right'>{$vat_type}</td>
             </tr>
             <tr>
-                <td>".Yii::t('lang', 'amount_of_money')."</td>
+                <td>" . Yii::t('lang', 'amount_of_money') . "</td>
                 <td style='text-align: right'>{$money}</td>
             </tr>
             ";
 }
 
-    $content .= "
+$content .= "
             <tr>
-                <td>".Yii::t('lang', 'total_price')."</td>
+                <td>" . Yii::t('lang', 'total_price') . "</td>
                 <td style='text-align: right'>{$money_add_total}</td>
             </tr>
             <tr>
-                <td>".Yii::t('lang', 'discount')."</td>
+                <td>" . Yii::t('lang', 'discount') . "</td>
                 <td style='text-align: right'>{$bonus_price}</td>
             </tr>
             <tr>
-                <td>".Yii::t('lang', 'the_amount_to_be_paid')."</td>
+                <td>" . Yii::t('lang', 'the_amount_to_be_paid') . "</td>
                 <td style='text-align: right'>
                     <strong ";
 
-                // line of bill_send_product
-                if ($billType == 'send') {
-                    if ($billConfig->bill_send_show_line == 'yes') {
-                        $content .= "style='border-bottom: #000 3px double'";
-                    }
-                } else {
-                    if ($billConfig->sale_condition_show_line == 'yes') {
-                        $content .= "style='border-bottom: #000 3px double'";
-                    }
-                }
+// line of bill_send_product
+if ($billType == 'send') {
+    if ($billConfig->bill_send_show_line == 'yes') {
+        $content .= "style='border-bottom: #000 3px double'";
+    }
+} else {
+    if ($billConfig->sale_condition_show_line == 'yes') {
+        $content .= "style='border-bottom: #000 3px double'";
+    }
+}
 
-    $content .= ">
+$content .= ">
                         {$total_pay}
                     </strong>
                 </td>
@@ -282,7 +283,7 @@ if ($billSale->bill_sale_vat == 'vat') {
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>".Yii::t('lang', 'gross_weight_g')."</td>
+                <td>" . Yii::t('lang', 'gross_weight_g') . "</td>
                 <td style='text-align: right'>{$sum_weight}</td>
             </tr>
         </table>
@@ -295,20 +296,20 @@ $footer = "
         <tr>
             ";
 
-            if ($billType != "sale") {
-                $footer .= "<td class='text' style='text-align: center; font-weight: bold'>".Yii::t('lang', 'shipper')."</td>";
-            }
+if ($billType != "sale") {
+    $footer .= "<td class='text' style='text-align: center; font-weight: bold'>" . Yii::t('lang', 'shipper') . "</td>";
+}
 
-            $footer .= "
-            <td class='text' style='text-align: center; font-weight: bold'>".Yii::t('lang', 'sales_person')."</td>
-            <td class='text' style='text-align: center; font-weight: bold'>".Yii::t('lang', 'reciever')."</td>
-            <td class='text' style='text-align: center; font-weight: bold'>".Yii::t('lang', 'inspector')."</td>
+$footer .= "
+            <td class='text' style='text-align: center; font-weight: bold'>" . Yii::t('lang', 'sales_person') . "</td>
+            <td class='text' style='text-align: center; font-weight: bold'>" . Yii::t('lang', 'reciever') . "</td>
+            <td class='text' style='text-align: center; font-weight: bold'>" . Yii::t('lang', 'inspector') . "</td>
         </tr>
         <tr>
             ";
 
-            if ($billType != "sale") {
-                $footer .= "
+if ($billType != "sale") {
+    $footer .= "
                     <td align='center'>
                         <span class='blank-row'>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -316,9 +317,9 @@ $footer = "
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                     </td>";
-            }
+}
 
-            $footer .= "
+$footer .= "
             <td align='center'>
                 <span class='blank-row'>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -342,20 +343,20 @@ $footer = "
             </td>
         </tr>
         <tr>
-            <td style='text-align: center; padding-top: 20px'>".Yii::t('lang', 'date')."............................</td>
-            <td style='text-align: center; padding-top: 20px'>".Yii::t('lang', 'date')."............................</td>
-            <td style='text-align: center; padding-top: 20px'>".Yii::t('lang', 'date')."............................</td>
+            <td style='text-align: center; padding-top: 20px'>" . Yii::t('lang', 'date') . "............................</td>
+            <td style='text-align: center; padding-top: 20px'>" . Yii::t('lang', 'date') . "............................</td>
+            <td style='text-align: center; padding-top: 20px'>" . Yii::t('lang', 'date') . "............................</td>
             ";
-        if ($billType != "sale") {
-            $footer .= "<td style='text-align: center; padding-top: 20px'>".Yii::t('lang', 'date')."............................</td>";
-        }
+if ($billType != "sale") {
+    $footer .= "<td style='text-align: center; padding-top: 20px'>" . Yii::t('lang', 'date') . "............................</td>";
+}
 
-        $footer .= "
+$footer .= "
         </tr>
     </table>
     <br />";
 
-$html = $header.$content.$footer;
+$html = $header . $content . $footer;
 
 $paper = 'A4';
 $w = 0;
@@ -364,7 +365,7 @@ $h = 0;
 // remark footer
 if ($billType == "sale") {
     if (!empty($configSoftware->bill_sale_footer)) {
-      $html .= "<div style='margin-top: 5px; font-size: 10px'>* {$configSoftware->bill_sale_footer}</div>";
+        $html .= "<div style='margin-top: 5px; font-size: 10px'>* {$configSoftware->bill_sale_footer}</div>";
     }
 
     if (!empty($billConfig->sale_paper)) {
@@ -392,7 +393,7 @@ if ($billType == "sale") {
     }
 } else {
     if (!empty($configSoftware->bill_send_footer)) {
-      $html .= "<div style='margin-top: 5px; font-size: 10px'>* {$configSoftware->bill_send_footer}</div>";
+        $html .= "<div style='margin-top: 5px; font-size: 10px'>* {$configSoftware->bill_send_footer}</div>";
     }
 
     if (!empty($billConfig->bill_send_product_paper)) {
@@ -444,7 +445,7 @@ if ($billType != 'sale') {
         $style .= "border-bottom: #808080 0.15pt solid;";
     }
 }
-        
+
 $style .= "
         }
         .cell-header {
@@ -503,7 +504,7 @@ if ($billType != 'sale') {
         $style .= "border-bottom: #808080 1px solid;";
     }
 }
-  
+
 $style .= "
         }
         .text {
@@ -532,8 +533,7 @@ $style .= "
     </style>
 ";
 
-$mpdf = new mPDF('th', $size, 0, 0, 5, 5, 5, 5);
-$mpdf->WriteHTML($style.$html);
+$mpdf = new mPDF(Yii::app()->language, $size, 0, 0, 5, 5, 5, 5);
+$mpdf->WriteHTML($style . $html);
 $mpdf->Output();
-?>
 

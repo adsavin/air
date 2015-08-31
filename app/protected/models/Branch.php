@@ -1,1 +1,64 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIEJyYW5jaCBleHRlbmRzIENBY3RpdmVSZWNvcmQgewoKICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRjbGFzc05hbWUgPSBfX0NMQVNTX18pIHsKICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHRhYmxlTmFtZSgpIHsKICAgIHJldHVybiAidGJfYnJhbmNoIjsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBhdHRyaWJ1dGVMYWJlbHMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgJ2JyYW5jaF9pZCcgPT4gJ2lkJywKICAgICAgICAnYnJhbmNoX25hbWUnID0+ICfguIrguLfguYjguK3guITguKXguLHguIfguKrguLTguJnguITguYnguLIv4Liq4Liy4LiC4LiyJywKICAgICAgICAnYnJhbmNoX3RlbCcgPT4gJ+C5gOC4muC4reC4o+C5jOC5guC4l+C4oycsCiAgICAgICAgJ2JyYW5jaF9lbWFpbCcgPT4gJ2VtYWlsJywKICAgICAgICAnYnJhbmNoX2FkZHJlc3MnID0+ICfguJfguLXguYjguK3guKLguLnguYgnLAogICAgICAgICdicmFuY2hfY3JlYXRlZF9kYXRlJyA9PiAn4Lin4Lix4LiZ4LiX4Li14LmI4Lia4Lix4LiZ4LiX4Li24LiBJwogICAgKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBydWxlcygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgICBhcnJheSgnYnJhbmNoX25hbWUsIGJyYW5jaF90ZWwsIGJyYW5jaF9hZGRyZXNzJywgJ3JlcXVpcmVkJyksCiAgICAgICAgYXJyYXkoJ2JyYW5jaF9lbWFpbCwgYnJhbmNoX2lkJywgJ3NhZmUnKQogICAgKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBiZWZvcmVWYWxpZGF0ZSgpIHsKICAgIGlmICgkdGhpcy0+aXNOZXdSZWNvcmQpIHsKICAgICAgJHRoaXMtPmJyYW5jaF9jcmVhdGVkX2RhdGUgPSBuZXcgQ0RiRXhwcmVzc2lvbigiTk9XKCkiKTsKICAgIH0KICAgIHJldHVybiBwYXJlbnQ6OmJlZm9yZVZhbGlkYXRlKCk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gc2VhcmNoKCkgewogICAgJGNyaXRlcmlhID0gbmV3IENEYkNyaXRlcmlhKCk7CiAgICAkY3JpdGVyaWEtPmNvbXBhcmUoJ2JyYW5jaF9pZCcsICR0aGlzLT5icmFuY2hfaWQpOwogICAgJGNyaXRlcmlhLT5jb21wYXJlKCdicmFuY2hfbmFtZScsICR0aGlzLT5icmFuY2hfbmFtZSk7CiAgICAkY3JpdGVyaWEtPmNvbXBhcmUoJ2JyYW5jaF90ZWwnLCAkdGhpcy0+YnJhbmNoX3RlbCk7CiAgICAkY3JpdGVyaWEtPmNvbXBhcmUoJ2JyYW5jaF9lbWFpbCcsICR0aGlzLT5icmFuY2hfZW1haWwpOwogICAgJGNyaXRlcmlhLT5jb21wYXJlKCdicmFuY2hfYWRkcmVzcycsICR0aGlzLT5icmFuY2hfYWRkcmVzcyk7CiAgICAkY3JpdGVyaWEtPmNvbXBhcmUoJ2JyYW5jaF9jcmV0ZWRfZGF0ZScsICR0aGlzLT5icmFuY2hfY3JlYXRlZF9kYXRlKTsKCiAgICByZXR1cm4gbmV3IENBY3RpdmVEYXRhUHJvdmlkZXIoJHRoaXMsIGFycmF5KCdjcml0ZXJpYScgPT4gJGNyaXRlcmlhKSk7CiAgfQoKICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIGdldE9wdGlvbnMoJG5vX3NlbGVjdCA9IG51bGwpIHsKICAgICRtb2RlbCA9IEJyYW5jaDo6bW9kZWwoKS0+ZmluZEFsbCgpOwogICAgJGFyciA9IGFycmF5KCk7CgoJCWlmICgkbm9fc2VsZWN0ID09IHRydWUpIHsKCQkJJGFycltdID0gJy0tLSDguYTguKHguYjguYDguKXguLfguK3guIHguKPguLLguKLguIHguLLguKMgLS0tJzsKCQl9CgogICAgZm9yZWFjaCAoJG1vZGVsIGFzICRyKSB7CiAgICAgICRhcnJbJHItPmJyYW5jaF9pZF0gPSAkci0+YnJhbmNoX25hbWU7CiAgICB9CiAgICByZXR1cm4gJGFycjsKICB9Cgp9Cg==")); ?>
+<?php
+
+class Branch extends CActiveRecord {
+
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+
+    public function tableName() {
+        return "tb_branch";
+    }
+
+    public function attributeLabels() {
+        return array(
+            'branch_id' => Yii::t("lang", "ID"),
+            'branch_name' => Yii::t("lang", "name_warehouse_store"),
+            'branch_tel' => Yii::t("lang", "phone_number"),
+            'branch_email' => Yii::t("lang", "email"),
+            'branch_address' => Yii::t("lang", "address"),
+            'branch_created_date' => Yii::t("lang", "save_the_date")
+        );
+    }
+
+    public function rules() {
+        return array(
+            array('branch_name, branch_tel, branch_address', 'required'),
+            array('branch_email, branch_id', 'safe')
+        );
+    }
+
+    public function beforeValidate() {
+        if ($this->isNewRecord) {
+            $this->branch_created_date = new CDbExpression("NOW()");
+        }
+        return parent::beforeValidate();
+    }
+
+    public function search() {
+        $criteria = new CDbCriteria();
+        $criteria->compare('branch_id', $this->branch_id);
+        $criteria->compare('branch_name', $this->branch_name);
+        $criteria->compare('branch_tel', $this->branch_tel);
+        $criteria->compare('branch_email', $this->branch_email);
+        $criteria->compare('branch_address', $this->branch_address);
+        $criteria->compare('branch_creted_date', $this->branch_created_date);
+
+        return new CActiveDataProvider($this, array('criteria' => $criteria));
+    }
+
+    public static function getOptions($no_select = null) {
+        $model = Branch::model()->findAll();
+        $arr = array();
+
+        if ($no_select == true) {
+            $arr[] = '--- ไม่เลือกรายการ ---';
+        }
+
+        foreach ($model as $r) {
+            $arr[$r->branch_id] = $r->branch_name;
+        }
+        return $arr;
+    }
+
+}

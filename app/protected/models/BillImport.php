@@ -1,1 +1,108 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIEJpbGxJbXBvcnQgZXh0ZW5kcyBDQWN0aXZlUmVjb3JkIHsKCiAgICBwcml2YXRlICRTVU1fQUxMOwoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gbW9kZWwoJGNsYXNzTmFtZSA9IF9fQ0xBU1NfXykgewogICAgICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKSB7CiAgICAgICAgcmV0dXJuICJ0Yl9iaWxsX2ltcG9ydCI7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGF0dHJpYnV0ZUxhYmVscygpIHsKICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgICdiaWxsX2ltcG9ydF9jb2RlJyA9PiAn4Lij4Lir4Lix4Liq4Lia4Li04LilJywKICAgICAgICAgICAgJ2JpbGxfaW1wb3J0X2NyZWF0ZWRfZGF0ZScgPT4gJ+C4p+C4seC4meC4l+C4teC5iOC4o+C4seC4muC5gOC4guC5ieC4sicsCiAgICAgICAgICAgICdmYXJtZXJfaWQnID0+ICfguIvguLfguYnguK3guKHguLLguIjguLLguIEnLAogICAgICAgICAgICAnYmlsbF9pbXBvcnRfcGF5JyA9PiAn4LiB4Liy4Lij4LiK4Liz4Lij4Liw4LmA4LiH4Li04LiZJywKICAgICAgICAgICAgJ2JpbGxfaW1wb3J0X3JlbWFyaycgPT4gJ+C4q+C4oeC4suC4ouC5gOC4q+C4leC4uCcsCiAgICAgICAgICAgICdiaWxsX2ltcG9ydF9wYXlfc3RhdHVzJyA9PiAn4Liq4LiW4Liy4LiZ4LiwJywKICAgICAgICAgICAgJ2JpbGxfaW1wb3J0X3BheV9kYXRlJyA9PiAn4Lin4Lix4LiZ4LiX4Li14LmI4LiK4Liz4Lij4Liw4LmA4LiH4Li04LiZJywKICAgICAgICAgICAgJ2JyYW5jaF9pZCcgPT4gJ+C4o+C4seC4muC5gOC4guC5ieC4suC4l+C4teC5iOC4quC4suC4guC4sicsCiAgICAgICAgICAgICdmcm9tX2JyYW5jaF9pZCcgPT4gJ+C4o+C4seC4muC5gOC4guC5ieC4suC4iOC4suC4geC4quC4suC4guC4sicKICAgICAgICApOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBydWxlcygpIHsKICAgICAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgICAgIGFycmF5KCdiaWxsX2ltcG9ydF9jb2RlJywgJ3VuaXF1ZScpLAogICAgICAgICAgICBhcnJheSgnCgkJCQkJCQliaWxsX2ltcG9ydF9jb2RlLAoJCQkJCQkJYmlsbF9pbXBvcnRfY3JlYXRlZF9kYXRlLAoJCQkJCQkJZmFybWVyX2lkLAoJCQkJCQkJYmlsbF9pbXBvcnRfcGF5LAoJCQkJCQkJYnJhbmNoX2lkCgkJCQkJCScsICdyZXF1aXJlZCcpLAogICAgICAgICAgICBhcnJheSgnCgkJCQkJCQliaWxsX2ltcG9ydF9wYXlfZGF0ZSwKCQkJCQkJCWZyb21fYnJhbmNoX2lkLAoJCQkJCQkJYmlsbF9pbXBvcnRfcGF5X3N0YXR1cywKCQkJCQkJCWJpbGxfaW1wb3J0X3JlbWFyawoJCQkJCQknLCAnc2FmZScpCiAgICAgICAgKTsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVsYXRpb25zKCkgewogICAgICAgIHJldHVybiBhcnJheSgKICAgICAgICAgICAgJ2Zhcm1lcicgPT4gYXJyYXkoc2VsZjo6QkVMT05HU19UTywgJ0Zhcm1lcicsICdmYXJtZXJfaWQnKSwKICAgICAgICAgICAgJ2JyYW5jaCcgPT4gYXJyYXkoc2VsZjo6QkVMT05HU19UTywgJ0JyYW5jaCcsICdicmFuY2hfaWQnKSwKICAgICAgICAgICAgJ2Zyb21fYnJhbmNoJyA9PiBhcnJheShzZWxmOjpCRUxPTkdTX1RPLCAnQnJhbmNoJywgJ2Zyb21fYnJhbmNoX2lkJykKICAgICAgICApOwogICAgfQoKICAgIHB1YmxpYyBmdW5jdGlvbiBidXR0b25JbXBvcnRQcm9kdWN0KCRkYXRhLCAkcm93KSB7CiAgICAgICAgJHRleHQgPSAkZGF0YS0+YmlsbF9pbXBvcnRfY29kZTsKICAgICAgICAkdXJsID0gYXJyYXkoCgkJCQkJIkJhc2ljL0JpbGxJbXBvcnREZXRhaWwiLAoJCQkJCSJiaWxsX2ltcG9ydF9jb2RlIiA9PiAkZGF0YS0+YmlsbF9pbXBvcnRfY29kZQoJCQkJKTsKCiAgICAgICAgcmV0dXJuIENIdG1sOjpsaW5rKCR0ZXh0LCAkdXJsLCBhcnJheSgKICAgICAgICAgICAgImNsYXNzIiA9PiAiYnRuIGJ0bi1pbmZvIgogICAgICAgICkpOwogICAgfQoKCQlwdWJsaWMgZnVuY3Rpb24gZ2V0SW1wb3J0UGF5TmFtZSgkaW1wb3J0X3BheV9uYW1lKSB7CgkJCSRhcnIgPSBCaWxsSW1wb3J0OjpnZXRJbXBvcnRQYXkoKTsKCQkJcmV0dXJuICRhcnJbJGltcG9ydF9wYXlfbmFtZV07CgkJfQoKCQlwdWJsaWMgZnVuY3Rpb24gZ2V0UGF5U3RhdHVzTmFtZSgkcGF5X3N0YXR1cykgewoJCQkkYXJyID0gQmlsbEltcG9ydDo6Z2V0UGF5U3RhdHVzKCk7CgkJCXJldHVybiAkYXJyWyRwYXlfc3RhdHVzXTsKCQl9CgoJCXB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gZ2V0SW1wb3J0UGF5KCkgewoJCQlyZXR1cm4gYXJyYXkoCgkJCQknY2FzaCcgPT4gJ+C5gOC4h+C4tOC4meC4quC4lCcsCgkJCQknY3JlZGl0JyA9PiAn4LmA4LiH4Li04LiZ4LmA4LiK4Li34LmI4LitJwoJCQkpOwoJCX0KCgkJcHVibGljIHN0YXRpYyBmdW5jdGlvbiBnZXRQYXlTdGF0dXMoKSB7CgkJCXJldHVybiBhcnJheSgKCQkJCSd3YWl0JyA9PiAn4Lij4Lit4LiK4Liz4Lij4LiwJywKCQkJCSdwYXknID0+ICfguIrguLPguKPguLDguYHguKXguYnguKcnCgkJCSk7CgkJfQoKCQlwdWJsaWMgZnVuY3Rpb24gZ2V0U3VtUmVwb3J0KCRkYXRhLCAkcm93KSB7CgogICAgICAgICRjcml0ZXJpYSA9IG5ldyBDRGJDcml0ZXJpYSgpOwogICAgICAgICRjcml0ZXJpYS0+c2VsZWN0ID0gJ1NVTShpbXBvcnRfYmlsbF9kZXRhaWxfcHJpY2UgKiBpbXBvcnRfYmlsbF9kZXRhaWxfcXR5KSBBUyBTVU1fQUxMJzsKICAgICAgICAkY3JpdGVyaWEtPmpvaW4gPSAnSU5ORVIgSk9JTiB0Yl9iaWxsX2ltcG9ydF9kZXRhaWwgQVMgYyBPTiBjLmJpbGxfaW1wb3J0X2NvZGUgPSB0LmJpbGxfaW1wb3J0X2NvZGUnOwogICAgICAgICRjcml0ZXJpYS0+Y29uZGl0aW9uID0gJ2JpbGxfaW1wb3J0X3BheSA9ICJjcmVkaXQiJzsKICAgICAgICAkY3JpdGVyaWEtPmNvbmRpdGlvbiA9ICdiaWxsX2ltcG9ydF9wYXlfc3RhdHVzID0gIndhaXQiJzsKICAgICAgICAkY3JpdGVyaWEtPmNvbXBhcmUoInQuZmFybWVyX2lkIiwgJGRhdGEtPmZhcm1lcl9pZCk7CiAgICAgICAgJGNyaXRlcmlhLT5ncm91cCA9ICd0LmZhcm1lcl9pZCc7CgogICAgICAgICRyZXN1bHQgPSBCaWxsSW1wb3J0Ojptb2RlbCgpLT5xdWVyeSgkY3JpdGVyaWEpOwoKICAgICAgICByZXR1cm4gbnVtYmVyX2Zvcm1hdCgkcmVzdWx0LT5TVU1fQUxMLCAyKTsKCiAgICB9Cgp9Cg==")); ?>
+<?php
+
+class BillImport extends CActiveRecord {
+
+    private $SUM_ALL;
+
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+
+    public function tableName() {
+        return "tb_bill_import";
+    }
+
+    public function attributeLabels() {
+        return array(
+            'bill_import_code' => 'รหัสบิล',
+            'bill_import_created_date' => 'วันที่รับเข้า',
+            'farmer_id' => 'ซื้อมาจาก',
+            'bill_import_pay' => 'การชำระเงิน',
+            'bill_import_remark' => 'หมายเหตุ',
+            'bill_import_pay_status' => 'สถานะ',
+            'bill_import_pay_date' => 'วันที่ชำระเงิน',
+            'branch_id' => 'รับเข้าที่สาขา',
+            'from_branch_id' => 'รับเข้าจากสาขา'
+        );
+    }
+
+    public function rules() {
+        return array(
+            array('bill_import_code', 'unique'),
+            array('
+							bill_import_code,
+							bill_import_created_date,
+							farmer_id,
+							bill_import_pay,
+							branch_id
+						', 'required'),
+            array('
+							bill_import_pay_date,
+							from_branch_id,
+							bill_import_pay_status,
+							bill_import_remark
+						', 'safe')
+        );
+    }
+
+    public function relations() {
+        return array(
+            'farmer' => array(self::BELONGS_TO, 'Farmer', 'farmer_id'),
+            'branch' => array(self::BELONGS_TO, 'Branch', 'branch_id'),
+            'from_branch' => array(self::BELONGS_TO, 'Branch', 'from_branch_id')
+        );
+    }
+
+    public function buttonImportProduct($data, $row) {
+        $text = $data->bill_import_code;
+        $url = array(
+					"Basic/BillImportDetail",
+					"bill_import_code" => $data->bill_import_code
+				);
+
+        return CHtml::link($text, $url, array(
+            "class" => "btn btn-info"
+        ));
+    }
+
+		public function getImportPayName($import_pay_name) {
+			$arr = BillImport::getImportPay();
+			return $arr[$import_pay_name];
+		}
+
+		public function getPayStatusName($pay_status) {
+			$arr = BillImport::getPayStatus();
+			return $arr[$pay_status];
+		}
+
+		public static function getImportPay() {
+			return array(
+				'cash' => 'เงินสด',
+				'credit' => 'เงินเชื่อ'
+			);
+		}
+
+		public static function getPayStatus() {
+			return array(
+				'wait' => 'รอชำระ',
+				'pay' => 'ชำระแล้ว'
+			);
+		}
+
+		public function getSumReport($data, $row) {
+
+        $criteria = new CDbCriteria();
+        $criteria->select = 'SUM(import_bill_detail_price * import_bill_detail_qty) AS SUM_ALL';
+        $criteria->join = 'INNER JOIN tb_bill_import_detail AS c ON c.bill_import_code = t.bill_import_code';
+        $criteria->condition = 'bill_import_pay = "credit"';
+        $criteria->condition = 'bill_import_pay_status = "wait"';
+        $criteria->compare("t.farmer_id", $data->farmer_id);
+        $criteria->group = 't.farmer_id';
+
+        $result = BillImport::model()->query($criteria);
+
+        return number_format($result->SUM_ALL, 2);
+
+    }
+
+}

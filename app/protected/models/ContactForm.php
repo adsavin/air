@@ -1,1 +1,41 @@
-<?php eval("?>".base64_decode("PD9waHAKCi8qKgogKiBDb250YWN0Rm9ybSBjbGFzcy4KICogQ29udGFjdEZvcm0gaXMgdGhlIGRhdGEgc3RydWN0dXJlIGZvciBrZWVwaW5nCiAqIGNvbnRhY3QgZm9ybSBkYXRhLiBJdCBpcyB1c2VkIGJ5IHRoZSAnY29udGFjdCcgYWN0aW9uIG9mICdTaXRlQ29udHJvbGxlcicuCiAqLwpjbGFzcyBDb250YWN0Rm9ybSBleHRlbmRzIENGb3JtTW9kZWwKewoJcHVibGljICRuYW1lOwoJcHVibGljICRlbWFpbDsKCXB1YmxpYyAkc3ViamVjdDsKCXB1YmxpYyAkYm9keTsKCXB1YmxpYyAkdmVyaWZ5Q29kZTsKCgkvKioKCSAqIERlY2xhcmVzIHRoZSB2YWxpZGF0aW9uIHJ1bGVzLgoJICovCglwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKQoJewoJCXJldHVybiBhcnJheSgKCQkJLy8gbmFtZSwgZW1haWwsIHN1YmplY3QgYW5kIGJvZHkgYXJlIHJlcXVpcmVkCgkJCWFycmF5KCduYW1lLCBlbWFpbCwgc3ViamVjdCwgYm9keScsICdyZXF1aXJlZCcpLAoJCQkvLyBlbWFpbCBoYXMgdG8gYmUgYSB2YWxpZCBlbWFpbCBhZGRyZXNzCgkJCWFycmF5KCdlbWFpbCcsICdlbWFpbCcpLAoJCQkvLyB2ZXJpZnlDb2RlIG5lZWRzIHRvIGJlIGVudGVyZWQgY29ycmVjdGx5CgkJCWFycmF5KCd2ZXJpZnlDb2RlJywgJ2NhcHRjaGEnLCAnYWxsb3dFbXB0eSc9PiFDQ2FwdGNoYTo6Y2hlY2tSZXF1aXJlbWVudHMoKSksCgkJKTsKCX0KCgkvKioKCSAqIERlY2xhcmVzIGN1c3RvbWl6ZWQgYXR0cmlidXRlIGxhYmVscy4KCSAqIElmIG5vdCBkZWNsYXJlZCBoZXJlLCBhbiBhdHRyaWJ1dGUgd291bGQgaGF2ZSBhIGxhYmVsIHRoYXQgaXMKCSAqIHRoZSBzYW1lIGFzIGl0cyBuYW1lIHdpdGggdGhlIGZpcnN0IGxldHRlciBpbiB1cHBlciBjYXNlLgoJICovCglwdWJsaWMgZnVuY3Rpb24gYXR0cmlidXRlTGFiZWxzKCkKCXsKCQlyZXR1cm4gYXJyYXkoCgkJCSd2ZXJpZnlDb2RlJz0+J1ZlcmlmaWNhdGlvbiBDb2RlJywKCQkpOwoJfQp9")); ?>
+<?php
+
+/**
+ * ContactForm class.
+ * ContactForm is the data structure for keeping
+ * contact form data. It is used by the 'contact' action of 'SiteController'.
+ */
+class ContactForm extends CFormModel {
+
+    public $name;
+    public $email;
+    public $subject;
+    public $body;
+    public $verifyCode;
+
+    /**
+     * Declares the validation rules.
+     */
+    public function rules() {
+        return array(
+            // name, email, subject and body are required
+            array('name, email, subject, body', 'required'),
+            // email has to be a valid email address
+            array('email', 'email'),
+            // verifyCode needs to be entered correctly
+            array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
+        );
+    }
+
+    /**
+     * Declares customized attribute labels.
+     * If not declared here, an attribute would have a label that is
+     * the same as its name with the first letter in upper case.
+     */
+    public function attributeLabels() {
+        return array(
+            'verifyCode' => 'Verification Code',
+        );
+    }
+
+}

@@ -72,7 +72,7 @@ $html = "
   </table>
 ";
 
-$mpdf = new mPDF('th');
+$mpdf = new mPDF(Yii::app()->language);
 $mpdf->WriteHTML($html);
 $mpdf->Output();
 

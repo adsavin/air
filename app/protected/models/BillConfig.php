@@ -1,1 +1,12 @@
-<?php eval("?>".base64_decode("PD9waHAKY2xhc3MgQmlsbENvbmZpZyBleHRlbmRzIENBY3RpdmVSZWNvcmQgewoJCglwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRjbGFzc05hbWUgPSBfX0NMQVNTX18pIHsKCQlyZXR1cm4gcGFyZW50Ojptb2RlbCgkY2xhc3NOYW1lKTsKCX0KCQoJcHVibGljIGZ1bmN0aW9uIHRhYmxlTmFtZSgpIHsKCQlyZXR1cm4gJ3RiX2JpbGxfY29uZmlnJzsKCX0KfQoK")); ?>
+<?php
+class BillConfig extends CActiveRecord {
+	
+	public static function model($className = __CLASS__) {
+		return parent::model($className);
+	}
+	
+	public function tableName() {
+		return 'tb_bill_config';
+	}
+}
+

@@ -549,7 +549,7 @@
 
     window.onload = function () {
         $("input[name=product_code]").focus();
-    }
+    };
 
     function computeVat() {
         is_vat = true;
@@ -885,7 +885,7 @@
                                         <tr>
                                             <th width="30px"><?php echo Yii::t('lang', 'no'); ?></th>
                                             <th width="130px"><?php echo Yii::t('lang', 'product_code'); ?></th>
-                                            <th width="130px">serial no</th>
+                                            <th width="130px"><?php echo Yii::t("lang", "product_serial") ?></th>
                                             <th><?php echo Yii::t('lang', 'list'); ?></th>
                                             <th width="50px"><?php echo Yii::t('lang', 'price'); ?></th>
                                             <th width="50px"><?php echo Yii::t('lang', 'number'); ?></th>
@@ -1254,7 +1254,7 @@
                         </div>
                         <div class="panel-body" style="background: #F5F7FA">
                             <div style="margin-top: 0px">
-                                <span>Bill NO: </span>
+                                <span><?php echo Yii::t("lang", "bill_no")?>: </span>
                                 <strong><?php echo $lastBillSale->bill_sale_id; ?></strong>
 
                                 <span style="margin-left: 20px"><?php echo Yii::t('lang', 'date_of_transaction'); ?>: </span>
@@ -1294,8 +1294,8 @@
                                     <thead>
                                         <tr>
                                             <th style="text-align: right" width="40px">#</th>
-                                            <th width="180px">barcode</th>
-                                            <th width="120px">serial</th>
+                                            <th width="180px"><?php echo Yii::t("lang", "barcode"); ?></th>
+                                            <th width="120px"><?php echo Yii::t("lang", "product_serial") ?></th>
                                             <th><?php echo Yii::t('lang', 'list'); ?></th>
                                             <th style="text-align: right" width="90px"><?php echo Yii::t('lang', 'price'); ?></th>
                                             <th style="text-align: right" width="70px"><?php echo Yii::t('lang', 'number'); ?></th>

@@ -1,1 +1,48 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIENvbmZpZ1NvZnR3YXJlIGV4dGVuZHMgQ0FjdGl2ZVJlY29yZAp7CiAgLyoqCiAgICogUmV0dXJucyB0aGUgc3RhdGljIG1vZGVsIG9mIHRoZSBzcGVjaWZpZWQgQVIgY2xhc3MuCiAgICogQHJldHVybiBDQWN0aXZlUmVjb3JkIHRoZSBzdGF0aWMgbW9kZWwgY2xhc3MKICAgKi8KICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRjbGFzc05hbWU9X19DTEFTU19fKQogIHsKICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogIH0KCiAgLyoqCiAgICogQHJldHVybiBzdHJpbmcgdGhlIGFzc29jaWF0ZWQgZGF0YWJhc2UgdGFibGUgbmFtZQogICAqLwogIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKQogIHsKICAgIHJldHVybiAnY29uZmlnX3NvZnR3YXJlJzsKICB9CgogIC8qKgogICAqIEByZXR1cm4gYXJyYXkgdmFsaWRhdGlvbiBydWxlcyBmb3IgbW9kZWwgYXR0cmlidXRlcy4KICAgKi8KICBwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKQogIHsKICAgIHJldHVybiBhcnJheSgKICAgICk7CiAgfQoKICAvKioKICAgKiBAcmV0dXJuIGFycmF5IHJlbGF0aW9uYWwgcnVsZXMuCiAgICovCiAgcHVibGljIGZ1bmN0aW9uIHJlbGF0aW9ucygpCiAgewogICAgcmV0dXJuIGFycmF5KAogICAgKTsKICB9CgogIC8qKgogICAqIEByZXR1cm4gYXJyYXkgY3VzdG9taXplZCBhdHRyaWJ1dGUgbGFiZWxzIChuYW1lPSZndDtsYWJlbCkKICAgKi8KICBwdWJsaWMgZnVuY3Rpb24gYXR0cmlidXRlTGFiZWxzKCkKICB7CiAgICByZXR1cm4gYXJyYXkoCiAgICApOwogIH0KfQ==")); ?>
+<?php
+
+class ConfigSoftware extends CActiveRecord
+{
+  /**
+   * Returns the static model of the specified AR class.
+   * @return CActiveRecord the static model class
+   */
+  public static function model($className=__CLASS__)
+  {
+    return parent::model($className);
+  }
+
+  /**
+   * @return string the associated database table name
+   */
+  public function tableName()
+  {
+    return 'config_software';
+  }
+
+  /**
+   * @return array validation rules for model attributes.
+   */
+  public function rules()
+  {
+    return array(
+    );
+  }
+
+  /**
+   * @return array relational rules.
+   */
+  public function relations()
+  {
+    return array(
+    );
+  }
+
+  /**
+   * @return array customized attribute labels (name=&gt;label)
+   */
+  public function attributeLabels()
+  {
+    return array(
+    );
+  }
+}

@@ -1,1 +1,52 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIFVzZXIgZXh0ZW5kcyBDQWN0aXZlUmVjb3JkIHsKCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBtb2RlbCgkY2xhc3NOYW1lID0gX19DTEFTU19fKSB7CiAgICByZXR1cm4gcGFyZW50Ojptb2RlbCgkY2xhc3NOYW1lKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKSB7CiAgICByZXR1cm4gInRiX3VzZXIiOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIGF0dHJpYnV0ZUxhYmVscygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgICAidXNlcl9pZCIgPT4gImlkIiwKICAgICAgICAidXNlcl9uYW1lIiA9PiAi4LiK4Li34LmI4LitIiwKICAgICAgICAidXNlcl90ZWwiID0+ICLguYDguJrguK3guKPguYzguYLguJfguKMiLAogICAgICAgICJ1c2VyX2xldmVsIiA9PiAi4Lij4Liw4LiU4Lix4LiaIiwKICAgICAgICAidXNlcl91c2VybmFtZSIgPT4gInVzZXJuYW1lIiwKICAgICAgICAidXNlcl9wYXNzd29yZCIgPT4gInBhc3N3b3JkIiwKICAgICAgICAidXNlcl9jcmVhdGVkX2RhdGUiID0+ICLguKfguLHguJnguJfguLXguYjguJrguLHguJnguJfguLbguIEiLAoJCQkJImJyYW5jaF9pZCIgPT4gJ+C4quC4suC4guC4sicKICAgICk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgYXJyYXkoInVzZXJfdXNlcm5hbWUsIHVzZXJfcGFzc3dvcmQsIHVzZXJfbmFtZSIsICJyZXF1aXJlZCIpLAogICAgICAgIGFycmF5KCJ1c2VyX3RlbCwgdXNlcl9sZXZlbCwgdXNlcl9pZCwgYnJhbmNoX2lkIiwgInNhZmUiKQogICAgKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBiZWZvcmVWYWxpZGF0ZSgpIHsKICAgIGlmICgkdGhpcy0+aXNOZXdSZWNvcmQpIHsKICAgICAgJHRoaXMtPnVzZXJfY3JlYXRlZF9kYXRlID0gbmV3IENEYkV4cHJlc3Npb24oIk5PVygpIik7CiAgICB9CiAgICByZXR1cm4gcGFyZW50OjpiZWZvcmVWYWxpZGF0ZSgpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHNlYXJjaCgpIHsKICAgIHJldHVybiBuZXcgQ0FjdGl2ZURhdGFQcm92aWRlcigkdGhpcywgYXJyYXkoCiAgICAgICAgJ3NvcnQnID0+IGFycmF5KCdkZWZhdWx0T3JkZXInID0+ICd1c2VyX2lkIERFU0MnKQogICAgKSk7CiAgfQoKCXB1YmxpYyBmdW5jdGlvbiByZWxhdGlvbnMoKSB7CgkJcmV0dXJuIGFycmF5KAoJCQknQnJhbmNoJyA9PiBhcnJheShzZWxmOjpCRUxPTkdTX1RPLCAnQnJhbmNoJywgJ2JyYW5jaF9pZCcpCgkJKTsKCX0KCn0K")); ?>
+<?php
+
+class User extends CActiveRecord {
+
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
+
+  public function tableName() {
+    return "tb_user";
+  }
+
+  public function attributeLabels() {
+    return array(
+        "user_id" => "id",
+        "user_name" => "ชื่อ",
+        "user_tel" => "เบอร์โทร",
+        "user_level" => "ระดับ",
+        "user_username" => "username",
+        "user_password" => "password",
+        "user_created_date" => "วันที่บันทึก",
+				"branch_id" => 'สาขา'
+    );
+  }
+
+  public function rules() {
+    return array(
+        array("user_username, user_password, user_name", "required"),
+        array("user_tel, user_level, user_id, branch_id", "safe")
+    );
+  }
+
+  public function beforeValidate() {
+    if ($this->isNewRecord) {
+      $this->user_created_date = new CDbExpression("NOW()");
+    }
+    return parent::beforeValidate();
+  }
+
+  public function search() {
+    return new CActiveDataProvider($this, array(
+        'sort' => array('defaultOrder' => 'user_id DESC')
+    ));
+  }
+
+	public function relations() {
+		return array(
+			'Branch' => array(self::BELONGS_TO, 'Branch', 'branch_id')
+		);
+	}
+
+}

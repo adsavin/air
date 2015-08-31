@@ -123,7 +123,7 @@ if (!empty($configSoftware->bill_drop_footer)) {
     $html .= "<div style='margin-top: 5px; font-size: 10px'>* {$configSoftware->bill_drop_footer}</div>";
 }
 
-$mpdf = new mPDF('th', 'A4', 0, 0, 5, 5, 5, 5);
+$mpdf = new mPDF(Yii::app()->language, 'A4', 0, 0, 5, 5, 5, 5);
 $mpdf->WriteHTML(file_get_contents('css/report_big.css'), 1);
 $mpdf->WriteHTML($html);
 $mpdf->Output();

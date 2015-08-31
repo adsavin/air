@@ -59,7 +59,7 @@ for ($i = 0; $i < $rows; $i++) {
 
 $html .= "</table>";
 
-$pdf = new mPDF('th', 'A4', '','' , 0 , 0 , 2 , 0 , 0 , 0); 
+$pdf = new mPDF(Yii::app()->language, 'A4', '','' , 0 , 0 , 2 , 0 , 0 , 0); 
 $pdf->WriteHTML($html);
 $pdf->SetDisplayMode('fullpage');
 $pdf->Output();

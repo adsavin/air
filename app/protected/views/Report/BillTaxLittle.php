@@ -8,7 +8,7 @@ $w = $billConfig->slip_width;
 $h = $billConfig->slip_height;
 $font_size = $billConfig->slip_font_size;
 
-$pdf = new mPDF('th', array($w, $h), 0, 0, 5, 5, 5, 5);
+$pdf = new mPDF(Yii::app()->language, array($w, $h), 0, 0, 5, 5, 5, 5);
 
 /*
  * Logo

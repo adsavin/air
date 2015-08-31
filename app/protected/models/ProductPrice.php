@@ -1,1 +1,13 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIFByb2R1Y3RQcmljZSBleHRlbmRzIENBY3RpdmVSZWNvcmQgewoKICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRuYW1lID0gX19DTEFTU19fKSB7CiAgICByZXR1cm4gcGFyZW50Ojptb2RlbCgkbmFtZSk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gdGFibGVOYW1lKCkgewogICAgcmV0dXJuICJwcm9kdWN0X3ByaWNlcyI7CiAgfQogIAp9")); ?>
+<?php
+
+class ProductPrice extends CActiveRecord {
+
+  public static function model($name = __CLASS__) {
+    return parent::model($name);
+  }
+
+  public function tableName() {
+    return "product_prices";
+  }
+  
+}

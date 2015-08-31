@@ -1,1 +1,33 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIEJpbGxTYWxlRGV0YWlsIGV4dGVuZHMgQ0FjdGl2ZVJlY29yZCB7CiAgICAKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gbW9kZWwoJGNsYXNzTmFtZSA9IF9fQ0xBU1NfXykgewogICAgICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogICAgfQogICAgCiAgICBwdWJsaWMgZnVuY3Rpb24gdGFibGVOYW1lKCkgewogICAgICAgIHJldHVybiAndGJfYmlsbF9zYWxlX2RldGFpbCc7CiAgICB9CiAgICAKICAgIHB1YmxpYyBmdW5jdGlvbiBhdHRyaWJ1dGVMYWJlbHMoKSB7CiAgICAgICAgcmV0dXJuIGFycmF5KAogICAgICAgICAgICAnYmlsbF9zYWxlX2RldGFpbF9pZCcgPT4gJ2lkJywKICAgICAgICAgICAgJ2JpbGxfaWQnID0+ICfguKPguKvguLHguKrguJrguLTguKUnLAogICAgICAgICAgICAnYmlsbF9zYWxlX2RldGFpbF9iYXJjb2RlJyA9PiAn4Lij4Lir4Lix4Liq4Liq4Li04LiZ4LiE4LmJ4LiyJywKICAgICAgICAgICAgJ2JpbGxfc2FsZV9kZXRhaWxfcHJpY2UnID0+ICfguKPguLLguITguLInLAogICAgICAgICAgICAnYmlsbF9zYWxlX2RldGFpbF9wcmljZV92YXQnID0+ICfguKPguLLguITguLIgdmF0JywKICAgICAgICAgICAgJ2JpbGxfc2FsZV9kZXRhaWxfcXR5JyA9PiAn4LiI4Liz4LiZ4Lin4LiZJwogICAgICAgICk7CiAgICB9CiAgICAKICAgIHB1YmxpYyBmdW5jdGlvbiBnZXRQcm9kdWN0KCkgewogICAgICAgIHJldHVybiBQcm9kdWN0Ojptb2RlbCgpLT5maW5kKGFycmF5KAogICAgICAgICAgICAnY29uZGl0aW9uJyA9PiAicHJvZHVjdF9jb2RlID0gJ3skdGhpcy0+YmlsbF9zYWxlX2RldGFpbF9iYXJjb2RlfSciCiAgICAgICAgKSk7CiAgICB9Cgp9CgoK")); ?>
+<?php
+
+class BillSaleDetail extends CActiveRecord {
+    
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+    
+    public function tableName() {
+        return 'tb_bill_sale_detail';
+    }
+    
+    public function attributeLabels() {
+        return array(
+            'bill_sale_detail_id' => Yii::t("lang", "ID"),
+            'bill_id' => Yii::t("lang", "Bill ID"),
+            'bill_sale_detail_barcode' => Yii::t("lang", "Product Code"),
+            'bill_sale_detail_price' => Yii::t("lang", "price"),
+            'bill_sale_detail_price_vat' => Yii::t("lang", "price_vat"),
+            'bill_sale_detail_qty' => Yii::t("lang", "number"),
+            'branch_id' => Yii::t("lang", "branch")
+        );
+    }
+    
+    public function getProduct() {
+        return Product::model()->find(array(
+            'condition' => "product_code = '{$this->bill_sale_detail_barcode}'"
+        ));
+    }
+
+}
+
+

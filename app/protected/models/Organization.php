@@ -1,1 +1,37 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIE9yZ2FuaXphdGlvbiBleHRlbmRzIENBY3RpdmVSZWNvcmQgewoKICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRjbGFzc05hbWUgPSBfX0NMQVNTX18pIHsKICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHRhYmxlTmFtZSgpIHsKICAgIHJldHVybiAidGJfb3JnYW5pemF0aW9uIjsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBhdHRyaWJ1dGVMYWJlbHMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgIm9yZ19pZCIgPT4gImlkIiwKICAgICAgICAib3JnX25hbWUiID0+ICLguIrguLfguYjguK3guKPguYnguLLguJkv4Lia4Lij4Li04Lip4Lix4LiXIiwKICAgICAgICAib3JnX2FkZHJlc3NfMSIgPT4gIuC4l+C4teC5iOC4reC4ouC4ueC5iCDguJrguKPguKPguJfguLHguJQgMSIsCiAgICAgICAgIm9yZ19hZGRyZXNzXzIiID0+ICLguJfguLXguYjguK3guKLguLnguYgg4Lia4Lij4Lij4LiX4Lix4LiUIDIiLAogICAgICAgICJvcmdfYWRkcmVzc18zIiA9PiAi4LiX4Li14LmI4Lit4Lii4Li54LmIIOC4muC4o+C4o+C4l+C4seC4lCAzIiwKICAgICAgICAib3JnX2FkZHJlc3NfNCIgPT4gIuC4l+C4teC5iOC4reC4ouC4ueC5iCDguJrguKPguKPguJfguLHguJQgNCIsCiAgICAgICAgIm9yZ190ZWwiID0+ICLguYDguJrguK3guKPguYzguYLguJfguKMiLAogICAgICAgICJvcmdfZmF4IiA9PiAiZmF4IiwKICAgICAgICAib3JnX3RheF9jb2RlIiA9PiAi4LmA4Lil4LiC4Lib4Lij4Liw4LiI4Liz4LiV4Lix4Lin4Lic4Li54LmJ4LmA4Liq4Li14Lii4Lig4Liy4Lip4Li1IiwKICAgICAgICAib3JnX25hbWVfZW5nIiA9PiAi4LiK4Li34LmI4Lit4Lij4LmJ4Liy4LiZL+C4muC4o+C4tOC4qeC4seC4lyAo4Lit4Lix4LiH4LiB4Lik4LipKSIsCiAgICAgICAgJ29yZ19sb2dvJyA9PiAn4LmC4Lil4LmC4LiB4LmJIOC4guC4reC4h+C4o+C5ieC4suC4mScsCiAgICAgICAgJ29yZ19sb2dvX3Nob3dfb25fYmlsbCcgPT4gJ+C5geC4quC4lOC4h+C5guC4peC5guC4geC5ieC4muC4meC4muC4tOC4pScKICAgICk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgYXJyYXkoJ29yZ19uYW1lLCBvcmdfYWRkcmVzc18xLCBvcmdfdGVsJywgJ3JlcXVpcmVkJyksCiAgICAgICAgYXJyYXkoJ29yZ19hZGRyZXNzXzIsIG9yZ19hZGRyZXNzXzMsIG9yZ19hZGRyZXNzXzQsIG9yZ19mYXgsIG9yZ190YXhfY29kZSwgb3JnX25hbWVfZW5nJywgJ3NhZmUnKQogICAgKTsKICB9Cgp9Cg==")); ?>
+<?php
+
+class Organization extends CActiveRecord {
+
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
+
+  public function tableName() {
+    return "tb_organization";
+  }
+
+  public function attributeLabels() {
+    return array(
+        "org_id" => "id",
+        "org_name" => "ชื่อร้าน/บริษัท",
+        "org_address_1" => "ที่อยู่ บรรทัด 1",
+        "org_address_2" => "ที่อยู่ บรรทัด 2",
+        "org_address_3" => "ที่อยู่ บรรทัด 3",
+        "org_address_4" => "ที่อยู่ บรรทัด 4",
+        "org_tel" => "เบอร์โทร",
+        "org_fax" => "fax",
+        "org_tax_code" => "เลขประจำตัวผู้เสียภาษี",
+        "org_name_eng" => "ชื่อร้าน/บริษัท (อังกฤษ)",
+        'org_logo' => 'โลโก้ ของร้าน',
+        'org_logo_show_on_bill' => 'แสดงโลโก้บนบิล'
+    );
+  }
+
+  public function rules() {
+    return array(
+        array('org_name, org_address_1, org_tel', 'required'),
+        array('org_address_2, org_address_3, org_address_4, org_fax, org_tax_code, org_name_eng', 'safe')
+    );
+  }
+
+}

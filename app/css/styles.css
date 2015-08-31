@@ -101,3 +101,8 @@ form div {
 .flag{
     cursor: pointer;
 }
+
+.table thead tr th
+{
+    text-align: center;
+}

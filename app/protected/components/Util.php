@@ -1,1 +1,243 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIFV0aWwgewoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gdGhhaVRvTXlTUUxEYXRlKCRkYXRlKSB7CiAgICAgICAgaWYgKCFlbXB0eSgkZGF0ZSkpIHsKICAgICAgICAgICAgJGFyciA9IGV4cGxvZGUoIi8iLCAkZGF0ZSk7CgogICAgICAgICAgICBpZiAoY291bnQoJGFycikgPiAwKSB7CiAgICAgICAgICAgICAgICBpZiAoIWVtcHR5KCRhcnJbMl0pKSB7CiAgICAgICAgICAgICAgICAkeSA9ICRhcnJbMl07CiAgICAgICAgICAgICAgICAkbSA9ICRhcnJbMV07CiAgICAgICAgICAgICAgICAkZCA9ICRhcnJbMF07CgogICAgICAgICAgICAgICAgcmV0dXJuICJ7JHl9LXskbX0teyRkfSI7CiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gbXlzcWxUb1RoYWlEYXRlKCRkYXRlKSB7CiAgICAgICAgaWYgKCRkYXRlID09ICcwMDAwLTAwLTAwJykgewogICAgICAgICAgICByZXR1cm4gJy0nOwogICAgICAgIH0KICAgICAgICBpZiAoJGRhdGUgPT0gJzAwMDAtMDAtMDAgMDA6MDA6MDAnKSB7CiAgICAgICAgICAgIHJldHVybiAnLSc7CiAgICAgICAgfQoKICAgICAgICBpZiAoIWVtcHR5KCRkYXRlKSkgewogICAgICAgICAgICAkYXJyID0gZXhwbG9kZSgiLyIsICRkYXRlKTsKICAgICAgICAgICAgJGQgPSAnJzsKICAgICAgICAgICAgJG0gPSAnJzsKICAgICAgICAgICAgJHkgPSAnJzsKCiAgICAgICAgICAgIGlmIChjb3VudCgkYXJyKSA9PSAzKSB7CiAgICAgICAgICAgICAgICBpZiAoIWVtcHR5KCRhcnJbMl0pKSB7CiAgICAgICAgICAgICAgICAgICAgJHkgPSAkYXJyWzJdOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgaWYgKCFlbXB0eSgkYXJyWzFdKSkgewogICAgICAgICAgICAgICAgICAgICRtID0gJGFyclsxXTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGlmICghZW1wdHkoJGFyclswXSkpIHsKICAgICAgICAgICAgICAgICAgICAkZCA9ICRhcnJbMF07CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgcmV0dXJuICJ7JGR9L3skbX0veyR5fSI7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgICRhcnIgPSBleHBsb2RlKCcgJywgJGRhdGUpOwoKICAgICAgICAgICAgaWYgKGNvdW50KCRhcnIpID09IDIpIHsKICAgICAgICAgICAgICAgICRhcnJfZGF0ZSA9IGV4cGxvZGUoJy0nLCAkYXJyWzBdKTsKICAgICAgICAgICAgICAgICRfdGltZSA9ICRhcnJbMV07CgogICAgICAgICAgICAgICAgJHkgPSAkYXJyX2RhdGVbMF07CiAgICAgICAgICAgICAgICAkbSA9ICRhcnJfZGF0ZVsxXTsKICAgICAgICAgICAgICAgICRkID0gJGFycl9kYXRlWzJdOwoKICAgICAgICAgICAgICAgICRhcnJfdGltZSA9IGV4cGxvZGUoJzonLCAkX3RpbWUpOwogICAgICAgICAgICAgICAgJGggPSAkYXJyX3RpbWVbMF07CiAgICAgICAgICAgICAgICAkbWkgPSAkYXJyX3RpbWVbMV07CgogICAgICAgICAgICAgICAgcmV0dXJuICJ7JGR9L3skbX0veyR5fSB7JGh9OnskbWl9IjsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG5vd1RoYWkoKSB7CiAgICAgICAgcmV0dXJuIGRhdGUoImQvbS9ZIik7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBEYXRlVGhhaSgkc3RyRGF0ZSkgewogICAgICAgICRzdHJZZWFyID0gZGF0ZSgiWSIsIHN0cnRvdGltZSgkc3RyRGF0ZSkpICsgNTQzOwogICAgICAgICRzdHJNb250aCA9IGRhdGUoIm4iLCBzdHJ0b3RpbWUoJHN0ckRhdGUpKTsKICAgICAgICAkc3RyRGF5ID0gZGF0ZSgiaiIsIHN0cnRvdGltZSgkc3RyRGF0ZSkpOwogICAgICAgICRzdHJNb250aEN1dCA9IFV0aWw6Om1vbnRoUmFuZ2UoKTsKICAgICAgICAkc3RyTW9udGhUaGFpID0gJHN0ck1vbnRoQ3V0WyRzdHJNb250aF07CgogICAgICAgIHJldHVybiAiJHN0ckRheSAkc3RyTW9udGhUaGFpICRzdHJZZWFyIjsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vbnRoUmFuZ2UoKSB7CiAgICAgICAgJG1vbnRoUmFuZ2UgPSBhcnJheSgKICAgICAgICAgICAgJzEnID0+ICfguKHguIHguKPguLLguITguKEnLAogICAgICAgICAgICAnMicgPT4gJ+C4geC4uOC4oeC4oOC4suC4nuC4seC4meC4mOC5jCcsCiAgICAgICAgICAgICczJyA9PiAn4Lih4Li14LiZ4Liy4LiE4LihJywKICAgICAgICAgICAgJzQnID0+ICfguYDguKHguKnguLLguKLguJknLAogICAgICAgICAgICAnNScgPT4gJ+C4nuC4pOC4qeC4oOC4suC4hOC4oScsCiAgICAgICAgICAgICc2JyA9PiAn4Lih4Li04LiW4Li44LiZ4Liy4Lii4LiZJywKICAgICAgICAgICAgJzcnID0+ICfguIHguKPguIHguI/guLLguITguKEnLAogICAgICAgICAgICAnOCcgPT4gJ+C4quC4tOC4h+C4q+C4suC4hOC4oScsCiAgICAgICAgICAgICc5JyA9PiAn4LiB4Lix4LiZ4Lii4Liy4Lii4LiZJywKICAgICAgICAgICAgJzEwJyA9PiAn4LiV4Li44Lil4Liy4LiE4LihJywKICAgICAgICAgICAgJzExJyA9PiAn4Lie4Lik4Lio4LiI4Li04LiB4Liy4Lii4LiZJywKICAgICAgICAgICAgJzEyJyA9PiAn4LiY4Lix4LiZ4Lin4Liy4LiE4LihJywKICAgICAgICApOwoKICAgICAgICByZXR1cm4gJG1vbnRoUmFuZ2U7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiB5ZWFyUmFuZ2UoKSB7CiAgICAgICAgJHlTdGFydCA9IGRhdGUoJ1knKSAtIDU7CiAgICAgICAgJHlFbmQgPSBkYXRlKCdZJykgKyAxMDsKCiAgICAgICAgZm9yKCRpID0gJHlTdGFydDsgJGkgPD0gJHlFbmQ7ICRpKyspIHsKICAgICAgICAgICAgJHllYXJzWyRpXSA9ICRpICsgNTQzOwogICAgICAgIH0KCiAgICAgICAgcmV0dXJuICR5ZWFyczsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIE1vbnRoVGhhaSgkbW9udGgpIHsKICAgICAgICAkbW9udGhZZWFyID0gVXRpbDo6bW9udGhSYW5nZSgpOwoKICAgICAgICBmb3JlYWNoKCRtb250aFllYXIgYXMgJGtleXMgPT4gJHZhbHVlKSB7CiAgICAgICAgICAgIGlmKCRtb250aCA9PSAka2V5cykgewogICAgICAgICAgICAgICAgcmV0dXJuICR2YWx1ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIFllYXJUaGFpKCR5ZWFyKSB7CiAgICAgICAgcmV0dXJuICR5ZWFyICsgNTQzOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gTW9udGhZZWFyVGhhaSgkc3RyRGF0ZSkgewogICAgICAgICRzdHJZZWFyID0gZGF0ZSgiWSIsIHN0cnRvdGltZSgkc3RyRGF0ZSkpICsgNTQzOwogICAgICAgICRzdHJNb250aCA9IGRhdGUoIm4iLCBzdHJ0b3RpbWUoJHN0ckRhdGUpKTsKICAgICAgICAkc3RyTW9udGhDdXQgPSBVdGlsOjptb250aFJhbmdlKCk7CiAgICAgICAgJHN0ck1vbnRoVGhhaSA9ICRzdHJNb250aEN1dFskc3RyTW9udGhdOwoKICAgICAgICByZXR1cm4gIiRzdHJNb250aFRoYWkgJHN0clllYXIiOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gY29udmVydE51bWJlclRvVGV4dCgkbnVtYmVyKSB7CiAgICAgICRudW1iZXJfYXJyID0gZXhwbG9kZSgiLiIsICRudW1iZXIpOwogICAgICAkbnVtYmVyID0gJG51bWJlcl9hcnJbMF07CgogICAgICAkbnVtYmVyID0gc3RyX3JlcGxhY2UoIiwiLCAiIiwgJG51bWJlcik7CiAgICAgICRhcnIgPSBhcnJheSgiIiwgIuC4q+C4meC4tuC5iOC4hyIsICLguKrguK3guIciLCAi4Liq4Liy4LihIiwgIuC4quC4teC5iCIsICLguKvguYnguLIiLCAi4Lir4LiBIiwgIuC5gOC4iOC5h+C4lCIsICLguYHguJvguJQiLCAi4LmA4LiB4LmJ4LiyIik7CiAgICAgICRhcnJfcG9pbnQgPSBhcnJheSgiIiwgIiIsICLguKrguLTguJoiLCAi4Lij4LmJ4Lit4LiiIiwgIuC4nuC4seC4mSIsICLguKvguKHguLfguYjguJkiLCAi4LmB4Liq4LiZIiwgIuC4peC5ieC4suC4mSIpOwogICAgICAkb3V0cHV0ID0gIiI7CiAgICAgICRjb3VudF9wb2ludCA9IHN0cmxlbigkbnVtYmVyKTsKCiAgICAgIGZvciAoJGkgPSAwOyAkaSA8IHN0cmxlbigkbnVtYmVyKTsgJGkrKykgewogICAgICAgICRuID0gJG51bWJlclskaV07CiAgICAgICAgJHRleHRfbnVtYmVyID0gJGFyclskbl07CgogICAgICAgICRwb3NpdGlvbl9uYW1lID0gJGFycl9wb2ludFskY291bnRfcG9pbnRdOwoKICAgICAgICBpZiAoJG4gPT0gMCkgewogICAgICAgICAgJHBvc2l0aW9uX25hbWUgPSAiIjsKICAgICAgICB9CgogICAgICAgIC8vIOC4q+C4peC4seC4geC4quC4tOC4mgogICAgICAgIGlmICgkaSA9PSBzdHJsZW4oJG51bWJlcikgLSAyKSB7CiAgICAgICAgICBpZiAoJG4gPT0gMikgewogICAgICAgICAgICAkcG9zaXRpb25fbmFtZSA9ICLguKLguLXguYjguKrguLTguJoiOwogICAgICAgICAgICAkdGV4dF9udW1iZXIgPSAiIjsKICAgICAgICAgIH0gZWxzZSBpZiAoJG4gPT0gMSkgewogICAgICAgICAgICAkcG9zaXRpb25fbmFtZSA9ICLguKrguLTguJoiOwogICAgICAgICAgICAkdGV4dF9udW1iZXIgPSAiIjsKICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIC8vIOC4q+C4peC4seC4geC4quC4uOC4lOC4l+C5ieC4suC4ogogICAgICAgIGlmICgkaSA9PSBzdHJsZW4oJG51bWJlcikgLSAxKSB7CiAgICAgICAgICBpZiAoJG4gPT0gMCkgewogICAgICAgICAgICAkcG9zaXRpb25fbmFtZSA9ICIiOwogICAgICAgICAgICAkdGV4dF9udW1iZXIgPSAiIjsKICAgICAgICAgIH0gZWxzZSBpZiAoJG4gPT0gMSkgewogICAgICAgICAgICAkcG9zaXRpb25fbmFtZSA9ICLguYDguK3guYfguJQiOwogICAgICAgICAgICAkdGV4dF9udW1iZXIgPSAiIjsKICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgICRvdXRwdXQgLj0gInskdGV4dF9udW1iZXJ9eyRwb3NpdGlvbl9uYW1lfSI7CiAgICAgICAgJGNvdW50X3BvaW50LS07CiAgICAgIH0KCiAgICAgICRvdXRwdXQgLj0gIiDguJrguLLguJciOwoKICAgICAgLy8g4Liq4LiV4Liy4LiH4LiE4LmMCiAgICAgICRzYXRhbmcgPSAiIjsKCiAgICAgIGlmIChjb3VudCgkbnVtYmVyX2FycikgPiAxKSB7CiAgICAgICAgJHNhdGFuZ19udW1iZXIgPSAkbnVtYmVyX2FyclsxXTsgCgogICAgICAgICRzYXRhbmcxID0gc3Vic3RyKCRzYXRhbmdfbnVtYmVyLCAwLCAxKTsKICAgICAgICAkc2F0YW5nMiA9IHN1YnN0cigkc2F0YW5nX251bWJlciwgMSwgMSk7CgogICAgICAgICRzYXRhbmcxX3RleHQgPSAkYXJyWyRzYXRhbmcxXTsKICAgICAgICAkc2F0YW5nMl90ZXh0ID0gJGFyclskc2F0YW5nMl07CgogICAgICAgIC8vIOC4q+C4meC5iOC4p+C4ouC5gOC4o+C4teC4ouC4gQogICAgICAgICRzYXRhbmcxX3VuaXQgPSAiIjsKCiAgICAgICAgaWYgKCRzYXRhbmcxID09IDEpIHsKICAgICAgICAgICRzYXRhbmcxX3RleHQgPSAi4Liq4Li04LiaIjsKICAgICAgICB9IGVsc2UgaWYgKCRzYXRhbmcxID09IDIpIHsKICAgICAgICAgICRzYXRhbmcxX3RleHQgPSAi4Lii4Li14LmI4Liq4Li04LiaIjsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgaWYgKCRzYXRhbmcxID4gMCkgewogICAgICAgICAgICAkc2F0YW5nMV91bml0ID0gIuC4quC4tOC4miI7CiAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAvLyDguKvguJnguYjguKfguKLguJfguYnguLLguKIKICAgICAgICBpZiAoJHNhdGFuZzIgPT0gMSkgewogICAgICAgICAgJHNhdGFuZzJfdGV4dCA9ICLguYDguK3guYfguJQiOwogICAgICAgIH0KCiAgICAgICAgaWYgKCRzYXRhbmdfbnVtYmVyID4gMCkgewogICAgICAgICAgJHNhdGFuZyAuPSAiIHskc2F0YW5nMV90ZXh0fXskc2F0YW5nMV91bml0fXskc2F0YW5nMl90ZXh0fSDguKrguJXguLLguIfguITguYwiOwogICAgICAgIH0KICAgICAgfQoKICAgICAgJG91dHB1dCAuPSAieyRzYXRhbmd9IjsKCiAgICAgIHJldHVybiAkb3V0cHV0OwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gaW5wdXQoJGRhdGEpIHsKICAgICAgICBpZiAoIWVtcHR5KCRkYXRhKSkgewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgaWYgKGdldHR5cGUoJGRhdGEpID09ICdzdHJpbmcnKSB7CiAgICAgICAgICAgICAgICAgICAgJGRhdGEgPSBodG1sc3BlY2lhbGNoYXJzKCRkYXRhKTsKICAgICAgICAgICAgICAgICAgICAkZGF0YSA9IHN0cmlwX3RhZ3MoJGRhdGEpOwogICAgICAgICAgICAgICAgICAgICRkYXRhID0gc3RyaXBzbGFzaGVzKCRkYXRhKTsKICAgICAgICAgICAgICAgICAgICAkZGF0YSA9IHN0cl9yZXBsYWNlKHN0cnRvdXBwZXIoJ2RlbGV0ZScpLCAnJywgJGRhdGEpOwogICAgICAgICAgICAgICAgICAgICRkYXRhID0gc3RyX3JlcGxhY2Uoc3RydG91cHBlcigndXBkYXRlJyksICcnLCAkZGF0YSk7CiAgICAgICAgICAgICAgICAgICAgJGRhdGEgPSB0cmltKCRkYXRhKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uICRlKSB7CgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIAogICAgICAgIHJldHVybiAkZGF0YTsKICAgIH0KfQoKPz4K")); ?>
+<?php
+
+class Util {
+
+    public static function thaiToMySQLDate($date) {
+        if (!empty($date)) {
+            $arr = explode("/", $date);
+
+            if (count($arr) > 0) {
+                if (!empty($arr[2])) {
+                $y = $arr[2];
+                $m = $arr[1];
+                $d = $arr[0];
+
+                return "{$y}-{$m}-{$d}";
+              }
+            }
+        }
+    }
+
+    public static function mysqlToThaiDate($date) {
+        if ($date == '0000-00-00') {
+            return '-';
+        }
+        if ($date == '0000-00-00 00:00:00') {
+            return '-';
+        }
+
+        if (!empty($date)) {
+            $arr = explode("/", $date);
+            $d = '';
+            $m = '';
+            $y = '';
+
+            if (count($arr) == 3) {
+                if (!empty($arr[2])) {
+                    $y = $arr[2];
+                }
+                if (!empty($arr[1])) {
+                    $m = $arr[1];
+                }
+                if (!empty($arr[0])) {
+                    $d = $arr[0];
+                }
+
+                return "{$d}/{$m}/{$y}";
+            }
+
+            $arr = explode(' ', $date);
+
+            if (count($arr) == 2) {
+                $arr_date = explode('-', $arr[0]);
+                $_time = $arr[1];
+
+                $y = $arr_date[0];
+                $m = $arr_date[1];
+                $d = $arr_date[2];
+
+                $arr_time = explode(':', $_time);
+                $h = $arr_time[0];
+                $mi = $arr_time[1];
+
+                return "{$d}/{$m}/{$y} {$h}:{$mi}";
+            }
+        }
+    }
+
+    public static function nowThai() {
+        return date("d/m/Y");
+    }
+
+    public static function DateThai($strDate) {
+        $strYear = date("Y", strtotime($strDate)) + 543;
+        $strMonth = date("n", strtotime($strDate));
+        $strDay = date("j", strtotime($strDate));
+        $strMonthCut = Util::monthRange();
+        $strMonthThai = $strMonthCut[$strMonth];
+
+        return "$strDay $strMonthThai $strYear";
+    }
+
+    public static function monthRange() {
+        $monthRange = array(
+            '1' => 'มกราคม',
+            '2' => 'กุมภาพันธ์',
+            '3' => 'มีนาคม',
+            '4' => 'เมษายน',
+            '5' => 'พฤษภาคม',
+            '6' => 'มิถุนายน',
+            '7' => 'กรกฏาคม',
+            '8' => 'สิงหาคม',
+            '9' => 'กันยายน',
+            '10' => 'ตุลาคม',
+            '11' => 'พฤศจิกายน',
+            '12' => 'ธันวาคม',
+        );
+
+        return $monthRange;
+    }
+
+    public static function yearRange() {
+        $yStart = date('Y') - 5;
+        $yEnd = date('Y') + 10;
+
+        for($i = $yStart; $i <= $yEnd; $i++) {
+            $years[$i] = $i + 543;
+        }
+
+        return $years;
+    }
+
+    public static function MonthThai($month) {
+        $monthYear = Util::monthRange();
+
+        foreach($monthYear as $keys => $value) {
+            if($month == $keys) {
+                return $value;
+            }
+        }
+    }
+
+    public static function YearThai($year) {
+        return $year + 543;
+    }
+
+    public static function MonthYearThai($strDate) {
+        $strYear = date("Y", strtotime($strDate)) + 543;
+        $strMonth = date("n", strtotime($strDate));
+        $strMonthCut = Util::monthRange();
+        $strMonthThai = $strMonthCut[$strMonth];
+
+        return "$strMonthThai $strYear";
+    }
+
+    public static function convertNumberToText($number) {
+      $number_arr = explode(".", $number);
+      $number = $number_arr[0];
+
+      $number = str_replace(",", "", $number);
+      $arr = array("", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า");
+      $arr_point = array("", "", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน");
+      $output = "";
+      $count_point = strlen($number);
+
+      for ($i = 0; $i < strlen($number); $i++) {
+        $n = $number[$i];
+        $text_number = $arr[$n];
+
+        $position_name = $arr_point[$count_point];
+
+        if ($n == 0) {
+          $position_name = "";
+        }
+
+        // หลักสิบ
+        if ($i == strlen($number) - 2) {
+          if ($n == 2) {
+            $position_name = "ยี่สิบ";
+            $text_number = "";
+          } else if ($n == 1) {
+            $position_name = "สิบ";
+            $text_number = "";
+          }
+        }
+
+        // หลักสุดท้าย
+        if ($i == strlen($number) - 1) {
+          if ($n == 0) {
+            $position_name = "";
+            $text_number = "";
+          } else if ($n == 1) {
+            $position_name = "เอ็ด";
+            $text_number = "";
+          }
+        }
+
+        $output .= "{$text_number}{$position_name}";
+        $count_point--;
+      }
+
+      $output .= " บาท";
+
+      // สตางค์
+      $satang = "";
+
+      if (count($number_arr) > 1) {
+        $satang_number = $number_arr[1]; 
+
+        $satang1 = substr($satang_number, 0, 1);
+        $satang2 = substr($satang_number, 1, 1);
+
+        $satang1_text = $arr[$satang1];
+        $satang2_text = $arr[$satang2];
+
+        // หน่วยเรียก
+        $satang1_unit = "";
+
+        if ($satang1 == 1) {
+          $satang1_text = "สิบ";
+        } else if ($satang1 == 2) {
+          $satang1_text = "ยี่สิบ";
+        } else {
+          if ($satang1 > 0) {
+            $satang1_unit = "สิบ";
+          }
+        }
+
+        // หน่วยท้าย
+        if ($satang2 == 1) {
+          $satang2_text = "เอ็ด";
+        }
+
+        if ($satang_number > 0) {
+          $satang .= " {$satang1_text}{$satang1_unit}{$satang2_text} สตางค์";
+        }
+      }
+
+      $output .= "{$satang}";
+
+      return $output;
+    }
+
+    public static function input($data) {
+        if (!empty($data)) {
+            try {
+                if (gettype($data) == 'string') {
+                    $data = htmlspecialchars($data);
+                    $data = strip_tags($data);
+                    $data = stripslashes($data);
+                    $data = str_replace(strtoupper('delete'), '', $data);
+                    $data = str_replace(strtoupper('update'), '', $data);
+                    $data = trim($data);
+                }
+            } catch (Exception $e) {
+
+            }
+        }
+        
+        return $data;
+    }
+}
+
+?>

@@ -1,1 +1,67 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIE1lbWJlciBleHRlbmRzIENBY3RpdmVSZWNvcmQgewoKICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIG1vZGVsKCRjbGFzc05hbWUgPSBfX0NMQVNTX18pIHsKICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRjbGFzc05hbWUpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHRhYmxlTmFtZSgpIHsKICAgIHJldHVybiAidGJfbWVtYmVyIjsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBhdHRyaWJ1dGVMYWJlbHMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgJ21lbWJlcl9pZCcgPT4gJ2lkJywKICAgICAgICAnbWVtYmVyX25hbWUnID0+ICfguIrguLfguYjguK3guKrguKHguLLguIrguLTguIEv4Lij4LmJ4Liy4LiZJywKICAgICAgICAnbWVtYmVyX2NvZGUnID0+ICfguKPguKvguLHguKonLAogICAgICAgICdtZW1iZXJfdGVsJyA9PiAn4LmA4Lia4Lit4Lij4LmM4LmC4LiX4LijJywKICAgICAgICAnbWVtYmVyX2FkZHJlc3MnID0+ICfguJfguLXguYjguK3guKLguLnguYgnLAogICAgICAgICdtZW1iZXJfY3JlYXRlZF9kYXRlJyA9PiAn4Lin4Lix4LiZ4LiX4Li14LmI4Lia4Lix4LiZ4LiX4Li24LiBJywKCQkJCSdicmFuY2hfaWQnID0+ICfguKrguLLguILguLLguJfguLXguYjguKrguKHguLHguITguKMnLAogICAgICAgICd0YXhfY29kZScgPT4gJ+C5gOC4peC4guC4nOC4ueC5ieC5gOC4quC4teC4ouC4oOC4suC4qeC4tScKICAgICk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKSB7CiAgICByZXR1cm4gYXJyYXkoCiAgICAgICAgYXJyYXkoJ21lbWJlcl9jb2RlLCBtZW1iZXJfbmFtZScsICdyZXF1aXJlZCcpLAogICAgICAgIGFycmF5KCdtZW1iZXJfaWQsIG1lbWJlcl90ZWwsIG1lbWJlcl9hZGRyZXNzLCBtZW1iZXJfY3JlYXRlZF9kYXRlJywgJ3NhZmUnKQogICAgKTsKICB9CiAgCiAgcHVibGljIGZ1bmN0aW9uIHJlbGF0aW9ucygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgICAnQnJhbmNoJyA9PiBhcnJheShzZWxmOjpCRUxPTkdTX1RPLCAnQnJhbmNoJywgJ2JyYW5jaF9pZCcpCiAgICApOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIGJlZm9yZVZhbGlkYXRlKCkgewogICAgaWYgKCR0aGlzLT5pc05ld1JlY29yZCkgewogICAgICAkdGhpcy0+bWVtYmVyX2NyZWF0ZWRfZGF0ZSA9IG5ldyBDRGJFeHByZXNzaW9uKCJOT1coKSIpOwogICAgfQogICAgCiAgICByZXR1cm4gcGFyZW50OjpiZWZvcmVWYWxpZGF0ZSgpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHNlYXJjaCgpIHsKICAgICRjcml0ZXJpYSA9IG5ldyBDRGJDcml0ZXJpYSgpOwogICAgJGNyaXRlcmlhLT5jb21wYXJlKCdtZW1iZXJfY29kZScsICR0aGlzLT5tZW1iZXJfY29kZSk7CiAgICAkY3JpdGVyaWEtPmNvbXBhcmUoJ21lbWJlcl9uYW1lJywgJHRoaXMtPm1lbWJlcl9uYW1lKTsKICAgICRjcml0ZXJpYS0+Y29tcGFyZSgnbWVtYmVyX3RlbCcsICR0aGlzLT5tZW1iZXJfdGVsKTsKICAgICRjcml0ZXJpYS0+Y29tcGFyZSgnbWVtYmVyX2FkZHJlc3MnLCAkdGhpcy0+bWVtYmVyX2FkZHJlc3MpOwoKICAgIHJldHVybiBuZXcgQ0FjdGl2ZURhdGFQcm92aWRlcigkdGhpcywgYXJyYXkoCiAgICAgICAgJ3NvcnQnID0+IGFycmF5KAogICAgICAgICAgICAnZGVmYXVsdE9yZGVyJyA9PiAnbWVtYmVyX2lkIERFU0MnCiAgICAgICAgKSwKICAgICAgICAnY3JpdGVyaWEnID0+ICRjcml0ZXJpYSwKICAgICAgICAncGFnaW5hdGlvbicgPT4gYXJyYXkoCiAgICAgICAgICAgICdwYWdlU2l6ZScgPT4gMjAKICAgICAgICApCiAgICApKTsKICB9Cgp9CgoK")); ?>
+<?php
+
+class Member extends CActiveRecord {
+
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
+
+  public function tableName() {
+    return "tb_member";
+  }
+
+  public function attributeLabels() {
+    return array(
+        'member_id' => 'id',
+        'member_name' => 'ชื่อสมาชิก/ร้าน',
+        'member_code' => 'รหัส',
+        'member_tel' => 'เบอร์โทร',
+        'member_address' => 'ที่อยู่',
+        'member_created_date' => 'วันที่บันทึก',
+				'branch_id' => 'สาขาที่สมัคร',
+        'tax_code' => 'เลขผู้เสียภาษี'
+    );
+  }
+
+  public function rules() {
+    return array(
+        array('member_code, member_name', 'required'),
+        array('member_id, member_tel, member_address, member_created_date', 'safe')
+    );
+  }
+  
+  public function relations() {
+    return array(
+        'Branch' => array(self::BELONGS_TO, 'Branch', 'branch_id')
+    );
+  }
+
+  public function beforeValidate() {
+    if ($this->isNewRecord) {
+      $this->member_created_date = new CDbExpression("NOW()");
+    }
+    
+    return parent::beforeValidate();
+  }
+
+  public function search() {
+    $criteria = new CDbCriteria();
+    $criteria->compare('member_code', $this->member_code);
+    $criteria->compare('member_name', $this->member_name);
+    $criteria->compare('member_tel', $this->member_tel);
+    $criteria->compare('member_address', $this->member_address);
+
+    return new CActiveDataProvider($this, array(
+        'sort' => array(
+            'defaultOrder' => 'member_id DESC'
+        ),
+        'criteria' => $criteria,
+        'pagination' => array(
+            'pageSize' => 20
+        )
+    ));
+  }
+
+}
+
+

@@ -1,1 +1,132 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIFByb2R1Y3QgZXh0ZW5kcyBDQWN0aXZlUmVjb3JkIHsKCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBtb2RlbCgkY2xhc3NOYW1lID0gX19DTEFTU19fKSB7CiAgICByZXR1cm4gcGFyZW50Ojptb2RlbCgkY2xhc3NOYW1lKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKSB7CiAgICByZXR1cm4gInRiX3Byb2R1Y3QiOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIHJlbGF0aW9ucygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgJ2dyb3VwX3Byb2R1Y3QnID0+IGFycmF5KHNlbGY6OkJFTE9OR1NfVE8sICdHcm91cFByb2R1Y3QnLCAnZ3JvdXBfcHJvZHVjdF9pZCcpCiAgICApOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIGF0dHJpYnV0ZUxhYmVscygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgJ3Byb2R1Y3RfaWQnID0+ICdpZCcsCiAgICAgICdncm91cF9wcm9kdWN0X2lkJyA9PiAn4Lib4Lij4Liw4LmA4Lig4LiX4Liq4Li04LiZ4LiE4LmJ4LiyJywKICAgICAgJ3Byb2R1Y3RfY29kZScgPT4gJ+C4o+C4q+C4seC4quC4quC4tOC4meC4hOC5ieC4sicsCiAgICAgICdwcm9kdWN0X25hbWUnID0+ICfguIrguLfguYjguK3guKrguLTguJnguITguYnguLInLAogICAgICAncHJvZHVjdF9kZXRhaWwnID0+ICfguKPguLLguKLguKXguLDguYDguK3guLXguKLguJTguYDguJ7guLTguYjguKHguYDguJXguLTguKEnLAogICAgICAncHJvZHVjdF9jcmVhdGVkX2RhdGUnID0+ICfguKfguLHguJnguJfguLXguYjguJrguLHguJnguJfguLbguIEnLAogICAgICAncHJvZHVjdF9sYXN0X3VwZGF0ZScgPT4gJ+C4p+C4seC4meC4l+C4teC5iOC5geC4geC5ieC5hOC4guC4peC5iOC4suC4quC4uOC4lCcsCiAgICAgICdwcm9kdWN0X3F1YW50aXR5JyA9PiAn4LiI4Liz4LiZ4Lin4LiZ4LiE4LiH4LmA4Lir4Lil4Li34LitJywKICAgICAgJ3Byb2R1Y3RfcGFja19iYXJjb2RlJyA9PiAn4Lij4Lir4Lix4Liq4LmB4Lie4LiEJywKICAgICAgJ3Byb2R1Y3RfdG90YWxfcGVyX3BhY2snID0+ICfguIjguLPguJnguKfguJnguJXguYjguK3guYHguJ7guIQnLAogICAgICAncHJvZHVjdF9leHBpcmUnID0+ICfguIrguJnguLTguJTguKrguLTguJnguITguYnguLInLAogICAgICAncHJvZHVjdF9yZXR1cm4nID0+ICfguKrguLTguJnguITguYnguLLguJ3guLLguIHguILguLLguKInLAogICAgICAncHJvZHVjdF9leHBpcmVfZGF0ZScgPT4gJ+C4p+C4seC4meC4q+C4oeC4lOC4reC4suC4ouC4uOC4quC4tOC4meC4hOC5ieC4sicsCiAgICAgICdwcm9kdWN0X3NhbGVfY29uZGl0aW9uJyA9PiAn4LmA4LiH4Li34LmI4Lit4LiZ4LmE4LiC4LmA4Lin4Lil4Liy4LiC4Liy4LiiJywKICAgICAgJ3Byb2R1Y3Rfc2VyaWFsX25vJyA9PiAnc2VyaWFsIOC4quC4tOC4meC4hOC5ieC4sicsCiAgICAgICdwcm9kdWN0X3ByaWNlJyA9PiAn4Lij4Liy4LiE4Liy4Lib4Lil4Li14LiBJywKICAgICAgJ3Byb2R1Y3RfcHJpY2Vfc2VuZCcgPT4gJ+C4o+C4suC4hOC4suC4quC5iOC4hycsCiAgICAgICdwcm9kdWN0X3ByaWNlX3Blcl9wYWNrJyA9PiAn4Lij4Liy4LiE4Liy4LiV4LmI4Lit4LmB4Lie4LiEJywKICAgICAgJ3Byb2R1Y3RfcXVhbnRpdHlfb2ZfcGFjaycgPT4gJ+C4iOC4s+C4meC4p+C4meC4hOC4h+C5gOC4q+C4peC4t+C4rSjguYHguJ7guIQpJywKICAgICAgJ3Byb2R1Y3RfcHJpY2VfYnV5JyA9PiAn4Lij4Liy4LiE4Liy4LiX4Li44LiZICjguYDguInguKXguLXguYjguKIpJwogICAgKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBydWxlcygpIHsKICAgIHJldHVybiBhcnJheSgKICAgICAgYXJyYXkoJ2dyb3VwX3Byb2R1Y3RfaWQsIHByb2R1Y3RfY29kZSwgcHJvZHVjdF9uYW1lLCBwcm9kdWN0X3ByaWNlJywgJ3JlcXVpcmVkJyksCiAgICAgIGFycmF5KAogICAgICAgICdwcm9kdWN0X2RldGFpbCwKICAgICAgICAgICAgICBwcm9kdWN0X3F1YW50aXR5LAogICAgICAgICAgICAgIHByb2R1Y3RfcGFja19iYXJjb2RlLAogICAgICAgICAgICAgIHByb2R1Y3RfdG90YWxfcGVyX3BhY2ssCiAgICAgICAgICAgICAgcHJvZHVjdF9leHBpcmUsCiAgICAgICAgICAgICAgcHJvZHVjdF9yZXR1cm4sCiAgICAgICAgICAgICAgcHJvZHVjdF9leHBpcmVfZGF0ZSwKICAgICAgICAgICAgICBwcm9kdWN0X3NhbGVfY29uZGl0aW9uLAogICAgICAgICAgICAgIHByb2R1Y3Rfc2VyaWFsX25vLAogICAgICAgICAgICAgIHByb2R1Y3RfcHJpY2Vfc2VuZCwKICAgICAgICAgICAgICBwcm9kdWN0X3ByaWNlX3Blcl9wYWNrLAogICAgICAgICAgICAgIHByb2R1Y3RfcXVhbnRpdHlfb2ZfcGFjaywKICAgICAgICAgICAgICBwcm9kdWN0X3ByaWNlX2J1eSwKICAgICAgICAgICAgICBwcm9kdWN0X3RhZycsICdzYWZlJwogICAgICApLAogICAgICBhcnJheSgncHJvZHVjdF9jb2RlJywgJ3VuaXF1ZScsICdtZXNzYWdlJyA9PiAn4Lij4Lir4Lix4Liq4Liq4Li04LiZ4LiE4LmJ4Liy4LiZ4Li14LmJ4Lih4Li14LmB4Lil4LmJ4LinIOC5guC4m+C4o+C4lOC5g+C4iuC5ieC4o+C4q+C4seC4quC4reC4t+C5iOC4mScpCiAgICApOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIGJlZm9yZVZhbGlkYXRlKCkgewogICAgaWYgKCR0aGlzLT5pc05ld1JlY29yZCkgewogICAgICAkdGhpcy0+cHJvZHVjdF9sYXN0X3VwZGF0ZSA9IG5ldyBDRGJFeHByZXNzaW9uKCdOT1coKScpOwogICAgfQogICAgcmV0dXJuIHBhcmVudDo6YmVmb3JlVmFsaWRhdGUoKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBzZWFyY2goKSB7CiAgICByZXR1cm4gbmV3IENBY3RpdmVEYXRhUHJvdmlkZXIoJHRoaXMsIGFycmF5KAogICAgICAnc29ydCcgPT4gYXJyYXkoJ2RlZmF1bHRPcmRlcicgPT4gJ3Byb2R1Y3RfaWQgREVTQycpCiAgICApKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiBnZXRQcm9kdWN0RXhwaXJlKCkgewogICAgaWYgKCR0aGlzLT5wcm9kdWN0X2V4cGlyZSA9PSAnZXhwaXJlJykgewogICAgICByZXR1cm4gJ+C4quC4tOC4meC4hOC5ieC4suC4quC4lCc7CiAgICB9IGVsc2UgewogICAgICByZXR1cm4gJ+C5hOC4oeC5iOC5g+C4iuC5iOC4quC4tOC4meC4hOC5ieC4suC4quC4lCc7CiAgICB9CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gZ2V0UHJvZHVjdFJldHVybigpIHsKICAgIGlmICgkdGhpcy0+cHJvZHVjdF9yZXR1cm4gPT0gJ2luJykgewogICAgICByZXR1cm4gJ+C4quC4tOC4meC4hOC5ieC4suC4guC4reC4h+C4o+C5ieC4suC4mSc7CiAgICB9CiAgICByZXR1cm4gJ+C4quC4tOC4meC4hOC5ieC4suC4neC4suC4geC4guC4suC4oic7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gZ2V0R3JvdXBQcm9kdWN0QnlHcm91cFByb2R1Y3RJZCgpIHsKICAgICRncm91cF9wcm9kdWN0X2NvZGUgPSAkdGhpcy0+Z3JvdXBfcHJvZHVjdF9pZDsKCiAgICAkY3JpdGVyaWEgPSBuZXcgQ0RiQ3JpdGVyaWEoKTsKICAgICRjcml0ZXJpYS0+Y29uZGl0aW9uID0gImdyb3VwX3Byb2R1Y3RfY29kZSA9ICckZ3JvdXBfcHJvZHVjdF9jb2RlJyI7CgogICAgcmV0dXJuIEdyb3VwUHJvZHVjdDo6bW9kZWwoKS0+ZmluZCgkY3JpdGVyaWEpOwogIH0KCiAgcHVibGljIGZ1bmN0aW9uIGdldEdyb3VwUHJvZHVjdCgpIHsKICAgIHJldHVybiBHcm91cFByb2R1Y3Q6Om1vZGVsKCktPmZpbmRCeUF0dHJpYnV0ZXMoYXJyYXkoCiAgICAgICJncm91cF9wcm9kdWN0X2NvZGUiID0+ICR0aGlzLT5ncm91cF9wcm9kdWN0X2lkCiAgICApKTsKICB9CgogIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gZ2V0SW5mb0J5QmFyY29kZSgkYmFyY29kZSkgewogICAgJHByb2R1Y3QgPSBQcm9kdWN0Ojptb2RlbCgpLT5maW5kQnlBdHRyaWJ1dGVzKGFycmF5KAogICAgICAncHJvZHVjdF9jb2RlJyA9PiAkYmFyY29kZQogICAgKSk7CgogICAgJGluZm8gPSBhcnJheSgpOwoKICAgIGlmICghZW1wdHkoJHByb2R1Y3QpKSB7CiAgICAgICRpbmZvWydwcmljZSddID0gJHByb2R1Y3QtPnByb2R1Y3RfcHJpY2U7CiAgICAgICRpbmZvWydxdHlfcGVyX3BhY2snXSA9ICRwcm9kdWN0LT5wcm9kdWN0X3RvdGFsX3Blcl9wYWNrOwogICAgICAkaW5mb1snb2xkX3ByaWNlJ10gPSAkcHJvZHVjdC0+cHJvZHVjdF9wcmljZV9idXk7CiAgICAgICRpbmZvWyduYW1lJ10gPSAkcHJvZHVjdC0+cHJvZHVjdF9uYW1lOwogICAgfSBlbHNlIHsKICAgICAgJGluZm9bJ3ByaWNlJ10gPSAwOwogICAgICAkaW5mb1sncXR5X3Blcl9wYWNrJ10gPSAwOwogICAgICAkaW5mb1snb2xkX3ByaWNlJ10gPSAwOwogICAgICAkaW5mb1snbmFtZSddID0gJyc7CiAgICB9CgogICAgcmV0dXJuICRpbmZvOwogIH0KCn0K")); ?>
+<?php
+
+class Product extends CActiveRecord {
+
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
+
+  public function tableName() {
+    return "tb_product";
+  }
+
+  public function relations() {
+    return array(
+      'group_product' => array(self::BELONGS_TO, 'GroupProduct', 'group_product_id')
+    );
+  }
+
+  public function attributeLabels() {
+    return array(
+      'product_id' => 'id',
+      'group_product_id' => 'ประเภทสินค้า',
+      'product_code' => 'รหัสสินค้า',
+      'product_name' => 'ชื่อสินค้า',
+      'product_detail' => 'รายละเอียดเพิ่มเติม',
+      'product_created_date' => 'วันที่บันทึก',
+      'product_last_update' => 'วันที่แก้ไขล่าสุด',
+      'product_quantity' => 'จำนวนคงเหลือ',
+      'product_pack_barcode' => 'รหัสแพค',
+      'product_total_per_pack' => 'จำนวนต่อแพค',
+      'product_expire' => 'ชนิดสินค้า',
+      'product_return' => 'สินค้าฝากขาย',
+      'product_expire_date' => 'วันหมดอายุสินค้า',
+      'product_sale_condition' => 'เงื่อนไขเวลาขาย',
+      'product_serial_no' => 'serial สินค้า',
+      'product_price' => 'ราคาปลีก',
+      'product_price_send' => 'ราคาส่ง',
+      'product_price_per_pack' => 'ราคาต่อแพค',
+      'product_quantity_of_pack' => 'จำนวนคงเหลือ(แพค)',
+      'product_price_buy' => 'ราคาทุน (เฉลี่ย)'
+    );
+  }
+
+  public function rules() {
+    return array(
+      array('group_product_id, product_code, product_name, product_price', 'required'),
+      array(
+        'product_detail,
+              product_quantity,
+              product_pack_barcode,
+              product_total_per_pack,
+              product_expire,
+              product_return,
+              product_expire_date,
+              product_sale_condition,
+              product_serial_no,
+              product_price_send,
+              product_price_per_pack,
+              product_quantity_of_pack,
+              product_price_buy,
+              product_tag', 'safe'
+      ),
+      array('product_code', 'unique', 'message' => 'รหัสสินค้านี้มีแล้ว โปรดใช้รหัสอื่น')
+    );
+  }
+
+  public function beforeValidate() {
+    if ($this->isNewRecord) {
+      $this->product_last_update = new CDbExpression('NOW()');
+    }
+    return parent::beforeValidate();
+  }
+
+  public function search() {
+    return new CActiveDataProvider($this, array(
+      'sort' => array('defaultOrder' => 'product_id DESC')
+    ));
+  }
+
+  public function getProductExpire() {
+    if ($this->product_expire == 'expire') {
+      return 'สินค้าสด';
+    } else {
+      return 'ไม่ใช่สินค้าสด';
+    }
+  }
+
+  public function getProductReturn() {
+    if ($this->product_return == 'in') {
+      return 'สินค้าของร้าน';
+    }
+    return 'สินค้าฝากขาย';
+  }
+
+  public function getGroupProductByGroupProductId() {
+    $group_product_code = $this->group_product_id;
+
+    $criteria = new CDbCriteria();
+    $criteria->condition = "group_product_code = '$group_product_code'";
+
+    return GroupProduct::model()->find($criteria);
+  }
+
+  public function getGroupProduct() {
+    return GroupProduct::model()->findByAttributes(array(
+      "group_product_code" => $this->group_product_id
+    ));
+  }
+
+  public static function getInfoByBarcode($barcode) {
+    $product = Product::model()->findByAttributes(array(
+      'product_code' => $barcode
+    ));
+
+    $info = array();
+
+    if (!empty($product)) {
+      $info['price'] = $product->product_price;
+      $info['qty_per_pack'] = $product->product_total_per_pack;
+      $info['old_price'] = $product->product_price_buy;
+      $info['name'] = $product->product_name;
+    } else {
+      $info['price'] = 0;
+      $info['qty_per_pack'] = 0;
+      $info['old_price'] = 0;
+      $info['name'] = '';
+    }
+
+    return $info;
+  }
+
+}

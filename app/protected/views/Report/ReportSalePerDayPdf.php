@@ -114,7 +114,7 @@ if (empty($result)) {
 	";
 	
 	// Generate PDF
-	$mpdf = new mPDF('th', 'A4-L', 0, 0, 5, 5, 5, 5);
+	$mpdf = new mPDF(Yii::app()->language, 'A4-L', 0, 0, 5, 5, 5, 5);
 	$mpdf->WriteHTML($html);
 	$mpdf->Output();
 }

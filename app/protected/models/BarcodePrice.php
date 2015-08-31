@@ -1,1 +1,55 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIEJhcmNvZGVQcmljZSBleHRlbmRzIENBY3RpdmVSZWNvcmQKewogIC8qKgogICAqIFJldHVybnMgdGhlIHN0YXRpYyBtb2RlbCBvZiB0aGUgc3BlY2lmaWVkIEFSIGNsYXNzLgogICAqIEByZXR1cm4gQ0FjdGl2ZVJlY29yZCB0aGUgc3RhdGljIG1vZGVsIGNsYXNzCiAgICovCiAgcHVibGljIHN0YXRpYyBmdW5jdGlvbiBtb2RlbCgkY2xhc3NOYW1lPV9fQ0xBU1NfXykKICB7CiAgICByZXR1cm4gcGFyZW50Ojptb2RlbCgkY2xhc3NOYW1lKTsKICB9CgogIC8qKgogICAqIEByZXR1cm4gc3RyaW5nIHRoZSBhc3NvY2lhdGVkIGRhdGFiYXNlIHRhYmxlIG5hbWUKICAgKi8KICBwdWJsaWMgZnVuY3Rpb24gdGFibGVOYW1lKCkKICB7CiAgICByZXR1cm4gJ2JhcmNvZGVfcHJpY2VzJzsKICB9CgogIC8qKgogICAqIEByZXR1cm4gYXJyYXkgdmFsaWRhdGlvbiBydWxlcyBmb3IgbW9kZWwgYXR0cmlidXRlcy4KICAgKi8KICBwdWJsaWMgZnVuY3Rpb24gcnVsZXMoKQogIHsKICAgIHJldHVybiBhcnJheSgKICAgICk7CiAgfQoKICAvKioKICAgKiBAcmV0dXJuIGFycmF5IHJlbGF0aW9uYWwgcnVsZXMuCiAgICovCiAgcHVibGljIGZ1bmN0aW9uIHJlbGF0aW9ucygpCiAgewogICAgcmV0dXJuIGFycmF5KAoKICAgICk7CiAgfQoKICBwdWJsaWMgZnVuY3Rpb24gZ2V0UHJvZHVjdCgpIHsKICAgIHJldHVybiBQcm9kdWN0Ojptb2RlbCgpLT5maW5kQnlBdHRyaWJ1dGVzKGFycmF5KAogICAgICAncHJvZHVjdF9jb2RlJyA9PiAkdGhpcy0+YmFyY29kZV9mawogICAgKSk7CiAgfQoKICAvKioKICAgKiBAcmV0dXJuIGFycmF5IGN1c3RvbWl6ZWQgYXR0cmlidXRlIGxhYmVscyAobmFtZT0mZ3Q7bGFiZWwpCiAgICovCiAgcHVibGljIGZ1bmN0aW9uIGF0dHJpYnV0ZUxhYmVscygpCiAgewogICAgcmV0dXJuIGFycmF5KAogICAgKTsKICB9Cn0=")); ?>
+<?php
+
+class BarcodePrice extends CActiveRecord
+{
+  /**
+   * Returns the static model of the specified AR class.
+   * @return CActiveRecord the static model class
+   */
+  public static function model($className=__CLASS__)
+  {
+    return parent::model($className);
+  }
+
+  /**
+   * @return string the associated database table name
+   */
+  public function tableName()
+  {
+    return 'barcode_prices';
+  }
+
+  /**
+   * @return array validation rules for model attributes.
+   */
+  public function rules()
+  {
+    return array(
+    );
+  }
+
+  /**
+   * @return array relational rules.
+   */
+  public function relations()
+  {
+    return array(
+
+    );
+  }
+
+  public function getProduct() {
+    return Product::model()->findByAttributes(array(
+      'product_code' => $this->barcode_fk
+    ));
+  }
+
+  /**
+   * @return array customized attribute labels (name=&gt;label)
+   */
+  public function attributeLabels()
+  {
+    return array(
+    );
+  }
+}

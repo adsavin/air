@@ -1,1 +1,25 @@
-<?php eval("?>".base64_decode("PD9waHAKLyoqCiAqIENvbnRyb2xsZXIgaXMgdGhlIGN1c3RvbWl6ZWQgYmFzZSBjb250cm9sbGVyIGNsYXNzLgogKiBBbGwgY29udHJvbGxlciBjbGFzc2VzIGZvciB0aGlzIGFwcGxpY2F0aW9uIHNob3VsZCBleHRlbmQgZnJvbSB0aGlzIGJhc2UgY2xhc3MuCiAqLwpjbGFzcyBDb250cm9sbGVyIGV4dGVuZHMgQ0NvbnRyb2xsZXIKewoJLyoqCgkgKiBAdmFyIHN0cmluZyB0aGUgZGVmYXVsdCBsYXlvdXQgZm9yIHRoZSBjb250cm9sbGVyIHZpZXcuIERlZmF1bHRzIHRvICcvL2xheW91dHMvY29sdW1uMScsCgkgKiBtZWFuaW5nIHVzaW5nIGEgc2luZ2xlIGNvbHVtbiBsYXlvdXQuIFNlZSAncHJvdGVjdGVkL3ZpZXdzL2xheW91dHMvY29sdW1uMS5waHAnLgoJICovCglwdWJsaWMgJGxheW91dD0nLy9sYXlvdXRzL2NvbHVtbjEnOwoJLyoqCgkgKiBAdmFyIGFycmF5IGNvbnRleHQgbWVudSBpdGVtcy4gVGhpcyBwcm9wZXJ0eSB3aWxsIGJlIGFzc2lnbmVkIHRvIHtAbGluayBDTWVudTo6aXRlbXN9LgoJICovCglwdWJsaWMgJG1lbnU9YXJyYXkoKTsKCS8qKgoJICogQHZhciBhcnJheSB0aGUgYnJlYWRjcnVtYnMgb2YgdGhlIGN1cnJlbnQgcGFnZS4gVGhlIHZhbHVlIG9mIHRoaXMgcHJvcGVydHkgd2lsbAoJICogYmUgYXNzaWduZWQgdG8ge0BsaW5rIENCcmVhZGNydW1iczo6bGlua3N9LiBQbGVhc2UgcmVmZXIgdG8ge0BsaW5rIENCcmVhZGNydW1iczo6bGlua3N9CgkgKiBmb3IgbW9yZSBkZXRhaWxzIG9uIGhvdyB0byBzcGVjaWZ5IHRoaXMgcHJvcGVydHkuCgkgKi8KCXB1YmxpYyAkYnJlYWRjcnVtYnM9YXJyYXkoKTsKCgkKfQ==")); ?>
+<?php
+/**
+ * Controller is the customized base controller class.
+ * All controller classes for this application should extend from this base class.
+ */
+class Controller extends CController
+{
+	/**
+	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
+	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
+	 */
+	public $layout='//layouts/column1';
+	/**
+	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
+	 */
+	public $menu=array();
+	/**
+	 * @var array the breadcrumbs of the current page. The value of this property will
+	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
+	 * for more details on how to specify this property.
+	 */
+	public $breadcrumbs=array();
+
+	
+}

@@ -1,1 +1,12 @@
-<?php eval("?>".base64_decode("PD9waHAKCmNsYXNzIERyYXdDYXNoIGV4dGVuZHMgQ0FjdGl2ZVJlY29yZCB7CgogIHB1YmxpYyBzdGF0aWMgZnVuY3Rpb24gbW9kZWwoJG5hbWUgPSBfX0NMQVNTX18pIHsKICAgIHJldHVybiBwYXJlbnQ6Om1vZGVsKCRuYW1lKTsKICB9CgogIHB1YmxpYyBmdW5jdGlvbiB0YWJsZU5hbWUoKSB7CiAgICByZXR1cm4gImRyYXdjYXNoX2xvZ3MiOwogIH0KfQ==")); ?>
+<?php
+
+class DrawCash extends CActiveRecord {
+
+  public static function model($name = __CLASS__) {
+    return parent::model($name);
+  }
+
+  public function tableName() {
+    return "drawcash_logs";
+  }
+}
